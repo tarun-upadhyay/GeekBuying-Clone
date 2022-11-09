@@ -1,8 +1,13 @@
-import React from 'react'
+import { Container, HStack } from "@chakra-ui/react"
+import Main from "../Homepage/Main"
 
 const Homepage = () => {
   return (
-    <div>Homepage</div>
+    <HStack>
+    <Container>
+    <Main/>
+    </Container>
+    </HStack>
   )
 }
 
