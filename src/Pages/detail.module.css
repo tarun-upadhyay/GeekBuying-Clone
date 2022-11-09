@@ -1,0 +1,174 @@
+ 
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 45em;
+   box-shadow: aliceblue;
+    margin: auto;
+}
+#image{
+    height: 40em;
+    width: 35%;
+    margin: auto;
+   
+    
+}
+#image>img{
+    width: 100%;
+    height: 50%;
+}
+#detail{
+    height: 30em;
+    width: 55%;
+    border: 1px rgb(167, 122, 37);
+    margin: auto;
+}
+.aboutPro{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 55%;
+    height: 10%;
+    gap: 15px;
+
+}
+.price{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 10%;
+    gap: 10px;
+}
+.coupon{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 10%;
+    gap: 10px;
+}
+.count{
+    display: flex;
+    align-items: center;
+    justify-content:safe;
+    width: 40%;
+    height: 10%;
+    gap: 10px;
+     
+}
+.buttonSec{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 35%;
+    height: 10%;
+}
+.buttonSec>button{
+    padding: 15px 15px 15px 15px;
+    font-size: 12px;
+    margin: 0px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: blue;
+    color:white;
+    border: blue;
+    cursor: pointer;
+}
+.pa{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 73%;
+    height: 10%;
+    gap: 10px;
+}
+.ima{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 38%;
+    height: 10%;
+    gap: 10px;
+}
+.pay>p>img{
+height: 30px;
+width: 70px;
+position: absolute;
+margin-left: 10px;
+}
+.ima>img{
+    height: 30px;
+    width: 50px;
+}
+
+.media{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+.media>img{
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+}
+#sugg{
+    border: 1px solid red;
+    height: 15rem;
+    width: 80%;
+    margin: auto;
+}
+#you{
+    margin-left: 8em;
+}
+#slide{
+    height: 7em;
+    width: 100%;
+    margin: auto;
+    border: 1px solid red;
+    margin-top: 7em;
+}
+.feed{
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: safe;
+    gap: 25px;
+    padding: 5px 15px 5px 10px;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#desc{
+    height: 90vh;
+    width: 90%;
+    margin-top: 90px;
+    font-size: medium;
+}
+#desc>p{
+    font-weight: lighter;
+    font-size: 16px;
+
+}
+#desc>h3{
+    font-weight: bold;
+    font-size: 18px;
+}
+.imgdesc{
+    height: 15em;
+    width: 100%;
+    margin-top: -5em;
+}
+.imgdesc>img{
+    height: 15em;
+    margin: auto;
+    width: 98%;
+}
