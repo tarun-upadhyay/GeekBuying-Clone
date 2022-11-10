@@ -7,7 +7,7 @@ import Login from "./Login";
 import Payment from "./Payment";
 import Product from "./Product";
 import Singup from "./Singup";
-
+import Admin from "../Admin/Admin";
 const MainRoutes = () => {
   return (
     <Routes>
@@ -18,6 +18,9 @@ const MainRoutes = () => {
       <Route path="/payment" element={<Payment />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/singup" element={<Singup />}></Route>
+      <Route path="/admin" element={<Admin />}>
+        {" "}
+      </Route>
     </Routes>
   );
 };
