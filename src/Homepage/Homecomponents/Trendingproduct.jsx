@@ -2,6 +2,6 @@
 
 const Trendingproduct=()=>{
     return (
-        <div>   </div>
+        <div></div>
     )
 }
