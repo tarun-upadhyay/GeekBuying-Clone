@@ -1,7 +1,9 @@
-
+import {Heading} from "@chakra-ui/react"
 
 const Trendingproduct=()=>{
     return (
-        <div></div>
+        <Box>
+            <Heading></Heading>
+        </Box>
     )
 }
