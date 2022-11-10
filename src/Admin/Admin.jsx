@@ -1,39 +1,29 @@
-import React from "react";
-import { FormControl, FormLabel, Input,Select , Button} from "@chakra-ui/react";
+import { Container, Flex, Heading } from "@chakra-ui/react";
+import React, { useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import { addData } from "../Redux/action";
-const initState = {
-    title:"",
-    price: "",
-    img: "",
-    category: "",
-    
-}
+import { Link } from "react-router-dom";
+import { addData, addNewData } from "../Redux/action";
+
 const Admin = () => {
   const dispatch = useDispatch();
-  dispatch(addData)
-  const data = useSelector((store)=> store.products.products)
 
-  console.log(data)
-  
+  dispatch(addData);
+
+  const data = useSelector((store) => store.products);
+  console.log(data);
+
   return (
-    <div>
-      <FormControl isRequired>
-        <FormLabel>Product's title</FormLabel>
-        <Input placeholder="Enter title" />
-        <FormLabel>Price</FormLabel>
-        <Input placeholder="Enter price"></Input>
-        <Select placeholder="Category">
-          <option>New</option>
-          <option>Best Selling</option>
-        </Select>
-        <FormLabel>Image Url</FormLabel>
-        <Input placeholder="Url" type={"url"}/>
-        <FormLabel>Rating</FormLabel>
-        <Input placeholder="Rating"/>
-        <Button colorScheme='green'>Submit</Button>
-      </FormControl>
-    </div>
+    <Container maxW={"container"} padding="5" bg={"gray.500"}>
+     <Flex gap="10" alignContent={"center"} justify="center">
+     <Heading>
+        <Link to="/admin/addproduct">Add Product</Link>
+      </Heading>
+      <Heading>
+        <Link to="/admin/manage">Manage Product</Link>
+      </Heading>
+     </Flex>
+    </Container>
   );
 };
 
