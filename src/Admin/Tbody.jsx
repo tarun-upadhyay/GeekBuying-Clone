@@ -1,7 +1,14 @@
-import { Tr,Td, Tbody, Divider, Spacer,Button  } from '@chakra-ui/react'
+import { Tr,Td, Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,useDisclosure,FormControl,Input, FormLabel,
+    ModalBody,
+    ModalCloseButton, } from '@chakra-ui/react'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteData } from '../Redux/action'
+import Edit from './Edit'
 
 const Tbodydata = (data) => {
     
@@ -24,7 +31,7 @@ const handleDelete = (del)=>{
         <Td>RS:  <b>{price}</b></Td>
         <Td >{category}</Td>
         <Td>
-            <Button colorScheme={"yellow"}>Edit</Button>
+            <Button colorScheme={"yellow"} onClick={()=><Edit/>}>Edit</Button>
         </Td>
         <Td>
             <Button colorScheme={"red"} onClick={()=>handleDelete(data.data)}>Delete</Button>

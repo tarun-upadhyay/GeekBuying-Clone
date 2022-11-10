@@ -23,6 +23,7 @@ export const theme = extendTheme({
         md: {
           field: {
             borderRadius: "10%",
+            borderColor: 'black'
           },
         },
       },
@@ -30,6 +31,6 @@ export const theme = extendTheme({
   },
 });
 withDefaultVariant({
-  variant: "filled",
+  variant: "outline",
   components: ["Input"],
 });
