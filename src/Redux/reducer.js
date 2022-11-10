@@ -1,16 +1,24 @@
-import { getLocalData } from "../Utils/localStorageData";
-import * as types from "."
+import { getLocalData, saveData } from "../Utils/localStorageData";
+import * as types from "./actionType";
 const initialState = {
-    adminProd : getLocalData("adminproduct") || [],
+  products: getLocalData("products_data") || [],
+};
 
-}
-export const reducer = (initialState, action)=>{
-    const { type, payload } = action;
-    switch(type){
-        case types.GET_PRODCTS_LS:
-            return{
-                ...initialState,
-
-            }
-    }
-}
+export const reducer = (oldState = initialState, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case types.ADD_PRODUCTS_LS:
+      saveData("products_data", payload);
+      return {
+        ...oldState,
+        products: payload,
+      };
+      case types.GET_PRODCTS_LS:
+        return{
+            ...oldState,
+            products: payload,
+        }
+    default:
+      return oldState;
+  }
+};

@@ -1,14 +1,6 @@
-import * as types from "./actionType";
+import * as types from './actionType';
 
-
-
-
-
-
-export const getData = (dispatch) => {
-  try {
-    return dispatch({ type: types.GET_PRODCTS_LS });
-  } catch {
-    return null;
-  }
+import data from "../db.json"
+export const addData = (dispatch)=>{
+    return dispatch({type: types.ADD_PRODUCTS_LS, payload: data})
 };

@@ -1,5 +1,7 @@
 import React from "react";
 import { FormControl, FormLabel, Input,Select , Button} from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
+import { addData } from "../Redux/action";
 const initState = {
     title:"",
     price: "",
@@ -7,7 +9,13 @@ const initState = {
     category: "",
     
 }
-const admin = () => {
+const Admin = () => {
+  const dispatch = useDispatch();
+  dispatch(addData)
+  const data = useSelector((store)=> store.products.products)
+
+  console.log(data)
+  
   return (
     <div>
       <FormControl isRequired>
@@ -29,4 +37,4 @@ const admin = () => {
   );
 };
 
-export default admin;
+export default Admin;

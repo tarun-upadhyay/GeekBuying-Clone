@@ -1,3 +1,4 @@
 export const GET_PRODCTS_LS = "GET_PRODUCTS_LS";
+export const ADD_PRODUCTS_LS = ' ADD_PRODUCTS_LS';
 export const EDIT_PRODUCTS_LS = 'EDIT_PRODUCTS_LS';
 export const DEL_PRODUCTS_LS = 'DEL_PRODUCTS_LS';
