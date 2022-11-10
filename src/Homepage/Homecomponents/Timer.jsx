@@ -7,6 +7,7 @@ const Timer=()=>{
     const [timerHours,setTimerHours]=useState();
     const [timerMinutes,setTimerMinutes]=useState();
     const [timerSeconds,setTimerSeconds]=useState();
+    const [timermiliSeconds,setTimerMiliseconds]=useState();
     let interval;
     const startTimer=()=>{
         const countDownDate = new Date("Nov 12,2022").getTime();
@@ -17,13 +18,15 @@ const Timer=()=>{
             const hours = Math.floor((distance % (24*60*60*1000)) / (1000*60*60));
             const minutes = Math.floor((distance % (60*60*1000)) / (1000*60));
             const seconds = Math.floor((distance% (60*1000))/1000);
+            const miliseconds = Math.floor((distance%(1000)))
             if(distance <0){
                 clearInterval(interval.current)
                }else {
                 setTimerDays(days);
                 setTimerHours(hours);
                 setTimerMinutes(minutes);
-                setTimerSeconds(seconds);        
+                setTimerSeconds(seconds);    
+                setTimerMiliseconds(miliseconds);
                }
         })
       
@@ -33,7 +36,7 @@ const Timer=()=>{
     },[]);  
     return (
         <Flex  gap={"10"}>
-      <Text  color={"red"}>Ends in {timerDays}:{timerHours}:{timerMinutes}:{timerSeconds}</Text>
+      <Text  color={"red"}>Ends in {timerDays}:{timerHours}:{timerMinutes}:{timerSeconds}:{timermiliSeconds}</Text>
       </Flex>
     )
 }
