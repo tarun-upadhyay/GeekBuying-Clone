@@ -10,8 +10,8 @@ const Admin = () => {
 
   dispatch(addData);
 
-  const data = useSelector((store) => store.products);
-  console.log(data);
+  
+
 
   return (
     <Container maxW={"container"} padding="5" bg={"gray.500"}>

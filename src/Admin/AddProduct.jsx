@@ -23,9 +23,12 @@ const initState = {
   img: "",
   category: "",
   rating: "",
+  id: '',
 };
 const AddProduct = () => {
   const dispatch = useDispatch();
+  const storedata = useSelector((e)=>e.products)
+
   const [formData, setFormData] = useState(initState);
   const { title, price, img, category, rating } = formData;
   const handleChange = (e) => {
@@ -33,6 +36,7 @@ const AddProduct = () => {
     setFormData({ ...formData, [name]: value });
   };
   const handleSubmit = () => {
+    initState.id = storedata.length
     dispatch(addNewData(formData));
     setFormData(initState);
   };
@@ -96,6 +100,9 @@ const AddProduct = () => {
                   <Input
                     placeholder="Enter url"
                     name="img"
+                  
+                    variant="outline"
+                    colorScheme={"red"}
                     value={img}
                     onChange={handleChange}
                   ></Input>
