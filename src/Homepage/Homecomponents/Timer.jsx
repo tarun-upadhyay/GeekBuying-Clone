@@ -1,7 +1,7 @@
 
 import {Box} from   "@chakra-ui/react"
 import { useEffect, useState } from "react";
-import {Text} from "@chakra-ui/react"
+import {Text,Flex,Spacer} from "@chakra-ui/react"
 const Timer=()=>{
     const [timerDays,setTimerDays]=useState();
     const [timerHours,setTimerHours]=useState();
@@ -30,14 +30,11 @@ const Timer=()=>{
     }
     useEffect(()=>{
         startTimer();
-    },[]);
+    },[]);  
     return (
-        <Box>
-      <Text>{timerDays}</Text>
-      <Text>{timerHours}</Text>
-      <Text>{timerMinutes}</Text>
-      <Text>{timerSeconds}</Text>
-      </Box>
+        <Flex  gap={"10"}>
+      <Text  color={"red"}>Ends in {timerDays}:{timerHours}:{timerMinutes}:{timerSeconds}</Text>
+      </Flex>
     )
 }
 
