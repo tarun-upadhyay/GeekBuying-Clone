@@ -35,7 +35,7 @@ const Timer=()=>{
         startTimer();
     },[]);  
     return (
-        <Flex  gap={"10"}>
+        <Flex  gap={"10"} mt={"3"} paddingRight={"2"}>
       <Text  color={"red"}>Ends in {timerDays}:{timerHours}:{timerMinutes}:{timerSeconds}:{timermiliSeconds}</Text>
       </Flex>
     )

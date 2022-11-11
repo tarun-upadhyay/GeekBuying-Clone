@@ -3,10 +3,10 @@ import Main from "../Homepage/Main"
 
 const Homepage = () => {
   return (
-    <HStack>
-    <Container>
+    <HStack margin={"auto"} justifyContent={"center"}>
+    
     <Main/>
-    </Container>
+   
     </HStack>
   )
 }
