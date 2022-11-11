@@ -52,10 +52,9 @@ setEdited({...editFormData, [name]: value})
         finalFocusRef={finalRef}
         isOpen={isOpen}
         onClose={onClose}
-        key={id}
       >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent key={id}>
           <ModalHeader>Edit you product</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
