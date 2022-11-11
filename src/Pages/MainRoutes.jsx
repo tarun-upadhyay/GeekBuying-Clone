@@ -8,6 +8,8 @@ import Payment from "./Payment";
 import Product from "./Product";
 import Singup from "./Singup";
 import Admin from "../Admin/Admin";
+import AddProduct from "../Admin/AddProduct";
+import Manage from "../Admin/Manage";
 const MainRoutes = () => {
   return (
     <Routes>
@@ -21,6 +23,8 @@ const MainRoutes = () => {
       <Route path="/admin" element={<Admin />}>
         {" "}
       </Route>
+      <Route path="/admin/addproduct" element={<AddProduct/>}></Route>
+    <Route path="/admin/manage" element={<Manage/>}></Route>
     </Routes>
   );
 };
