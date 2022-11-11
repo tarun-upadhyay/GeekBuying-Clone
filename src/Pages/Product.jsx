@@ -8,7 +8,9 @@ const Product = () => {
   const dispatch = useDispatch();
   dispatch(addData)
   const data = useSelector((store)=> store.products)
-  console.log(data)
+  //console.log(data)
+
+  
   return (
     <Box bg="#f2f2f2">
     <Box textAlign="center" p="30px" fontSize="30px" bg="white">New Arrivals</Box>
@@ -42,7 +44,7 @@ const Product = () => {
           <Text w="100px">Sort By :</Text>
           <Button colorScheme='black' variant='outline' h="25px" w="100px">Best Match</Button>
           <Button colorScheme='black' variant='outline' h="25px" w="100px">New Arrival</Button>
-          <Button colorScheme='black' variant='outline' h="25px" w="60px">Price</Button>
+          <Button colorScheme='black' variant='outline' h="25px" w="60px" >Price</Button>
           </Stack>
         </Box>
           <Grid templateColumns='repeat(4, 1fr)' gap={6} m="15px">
