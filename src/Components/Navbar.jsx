@@ -1,4 +1,5 @@
 import "./Nav.css";
+import { Link } from "react-router-dom";
 import { ImMobile2 } from "react-icons/im";
 import { CgShoppingCart } from "react-icons/cg";
 import { AiOutlineUser } from "react-icons/ai";
@@ -94,8 +95,10 @@ const SignInPop = () => {
             <div id="signPointer"></div>
             <div id="welcomeGreet">Welcome to Geekbuying</div>
             <div id="buttonDivSignInPop">
+            <Link to='/login'>
                 <button id="joinBtn">Join</button>
                 <button id="signInBtn">Sign In</button>
+            </Link>
             </div>
             <div id="topDiv"></div>
             <div id="orDiv">or</div>
