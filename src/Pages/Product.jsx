@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Grid, GridItem, Image, Select, Stack, Text } from '@chakra-ui/react';
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addData } from '../Redux/action';
 import { BsHeart } from "react-icons/bs";
@@ -8,8 +8,8 @@ const Product = () => {
   const dispatch = useDispatch();
   dispatch(addData)
   const data = useSelector((store)=> store.products)
-  //console.log(data)
-
+  const [ newData , setNewData ]  = useState(data)
+console.log(newData.sort((a,b)=>a.price - b.price))
   
   return (
     <Box bg="#f2f2f2">
@@ -53,7 +53,7 @@ const Product = () => {
                return <GridItem key={el.id} bg="white" p="5px">
                   <Image src={el.img}></Image>
                   <Text lineHeight="22px">{el.title}</Text>
-                  <Text mt="2px" fontSize="20px" fontWeight="bold">€{el.price}</Text>
+                  <Text mt="2px" fontSize="20px" fontWeight="bold">₹ {el.price}</Text>
                   <Box display="flex" mt="5"><BsHeart/><Text ml="5px" mt="-1">{el.rating}</Text></Box>
                 </GridItem>
               })

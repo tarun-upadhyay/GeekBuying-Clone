@@ -107,7 +107,7 @@ setEdited({...editFormData, [name]: value})
         <Td>{title}</Td>
 
         <Td>
-          RS: <b>{price}</b>
+        <b>₹</b> <b>{price}</b>
         </Td>
         <Td>{category}</Td>
         <Td>
