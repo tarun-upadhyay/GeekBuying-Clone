@@ -1,0 +1,266 @@
+#footer{
+    background-color: #F1F6FD;
+}
+
+#topFooterDiv{
+    min-height: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1F6FD;
+    border-bottom: 1px solid #CAD8EA;
+}
+
+#FooterTopShowDiv{
+    height: 57px;
+    width: 100%;
+    border-bottom:1px solid #CAD8EA;
+    background-color: #F1F6FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#FooterTopShowDivContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    font-weight: 700;
+    color: #0066FF;
+    cursor: pointer;
+}
+#footerTopNodisplayDiv{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 166px;
+    width: 1500px;
+}
+.footerTopNodisplayDivItem{
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footerTopNodisplayDivItem h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+.footerTopNodisplayDivItem p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #393939;
+}
+.nodisplayIcon{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+#subscribeFooter{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #CAD8EA;
+}
+#subscribeFooter input{
+    height: 46px;
+    width: 580px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 2px solid #0066FF;
+    padding: 0px 10px;
+}
+#subscribeFooter input:focus{
+    outline: #0066FF;
+}
+#subscribeFooter button{
+    height: 46px;
+    width: 112px;
+    background-color: #0066FF;
+    color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#manifooterContentDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#manifooterContent{
+    width: 1360px;
+    height: 210px;
+    margin-top: 42px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+#manifooterContent h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+#appDIv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#leftApp{
+    height: 120px;
+    width: 120px;
+    /* border: 1px solid black; */
+    margin: 5px 5px 5px 0px;
+}
+#rightApp {
+    height: 120px;
+    width: 120px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    cursor: pointer;
+}
+#socialDiv{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 26px;
+}
+#socialDiv div{
+    /* border: 1px solid green; */
+    height: 26px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0066FF;
+    font-size: 18px;
+    cursor: pointer;
+}
+#manifooterContentPolpular{
+    width: 1360px;
+    height: 96px;
+    /* border: 1px solid black; */
+}
+#manifooterContentPolpular h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+#footerHelp h3{
+    height: 30px;
+    font-size: 90%;
+}
+#footerHelp p{
+    color: #46474A;
+    font-size: 90%;
+    height: 28px;
+    cursor: pointer;
+}
+#footerSupport h3 {
+    height: 30px;
+    font-size: 90%;
+}
+#footerSupport p {
+    color: #46474A;
+    font-size: 90%;
+    height: 28px;
+    cursor: pointer;
+}
+#footerPolicies h3 {
+    height: 30px;
+    font-size: 90%;
+}
+#footerPolicies p {
+    color: #46474A;
+    font-size: 90%;
+    height: 28px;
+    cursor: pointer;
+}
+
+#manifooterContentLanguage{
+    height: 68px;
+    /* border: 1px solid red; */
+    width: 100%;
+    font-size: 90%;
+}
+#companyFooter{
+    height: 84px;
+    border-top: 1px solid #CAD8EA;
+    border-bottom: 1px solid #CAD8EA;
+}
+#footerCopyRight{
+    height: 41px;
+    /* border:1px solid blue; */
+}
+#popularItems{
+    /* border: 1px solid yellow; */
+    margin-top: 10px;
+}
+#popularItems div{
+    display: inline-block;
+    border: 1px solid rgb(239, 239, 239);
+    padding: 0px 6px;
+    margin: 5px;
+    border-radius: 3px;
+    color: #999999;
+    background-color: white;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+#manifooterContentLanguage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#manifooterContentLanguage div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #999999;
+    height: 15px;
+    padding:0px 5px;
+    color: #999999;
+    font-size: 95%;
+    cursor: pointer;
+}
+#footerApp{
+    /* border: 1px solid black; */
+    padding-left: 200px;
+}
+#footerRaiseTicket{
+    /* border: 1px solid black; */
+    padding-top: 20px;
+    cursor: pointer;
+}
+#companyFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#companyImg{
+    height: 30px;
+    width: 920px;
+}
+#resellerImg{
+    height: 30px;
+    width: 144px;
+}
+#trustpilotImg{
+    height: 30px;
+    width: 115px;
+}
+#footerCopyRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #46474A;
+    font-size: 90%;
+}
