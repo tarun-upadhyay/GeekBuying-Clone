@@ -37,6 +37,15 @@ export const reducer = (oldState = initialState, action) => {
         ...oldState,
         products: afterdel,
       };
+      case types.EDIT_PRODUCTS_LS:
+        const before = [...oldState.products]
+        let after = [payload]
+        let res = before.map(obj => after.find(o => o.id == obj.id) || obj)
+       saveData("products_data", res);
+       return{
+        ...oldState,
+        products: res,
+       }
 
     default:
       return oldState;
