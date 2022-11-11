@@ -7,6 +7,8 @@ import Register from "./Login/Signup";
 import Payment from "./Payment";
 import Product from "./Product";
 import Admin from "../Admin/Admin";
+import AddProduct from "../Admin/AddProduct";
+import Manage from "../Admin/Manage";
 const MainRoutes = () => {
   return (
     <Routes>
@@ -19,6 +21,9 @@ const MainRoutes = () => {
       <Route path="/admin" element={<Admin />}>
         {" "}
       </Route>
+      <Route path="/admin/addproduct" element={<AddProduct/>}></Route>
+    <Route path="/admin/manage" element={<Manage/>}></Route>
+    <Route path="*" element={<h1> 404 Page Not Found</h1>}></Route>
     </Routes>
   );
 };
