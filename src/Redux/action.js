@@ -13,3 +13,6 @@ export const deleteData = (parms) => (dispatch) => {
 export const editData = (params) => (dispatch) =>{
   return dispatch({type: types.EDIT_PRODUCTS_LS, payload: params})
 }
+export const detailPage = (params)=>(dispatch)=>{
+  return dispatch({type: types.DETAIL_PAGE, payload: params})
+}
