@@ -124,7 +124,8 @@ if(val == "htl"){
                   <Box display="flex" mt="5"><BsHeart/><Text ml="5px" mt="-1">{el.rating}</Text></Box>
                 </GridItem>
                </Link>
-              })
+
+})
             }
           </Grid>
       </Box>
