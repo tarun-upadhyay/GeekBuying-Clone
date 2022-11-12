@@ -118,7 +118,7 @@ const sendData = (e)=>{
           <Grid templateColumns={{base:'repeat(2, 1fr)', md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)" }} gap={6} m="15px">
             {
         newData.map((el)=>{
-               return  <Link to={"/cart"}>
+               return  <Link to={"/detail"}>
                <GridItem key={el.id} bg="white" p="5px" onClick={()=>sendData(el)}>
                   <Image src={el.img}></Image>
                   <Text lineHeight="22px">{el.title}</Text>
