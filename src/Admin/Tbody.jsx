@@ -19,13 +19,14 @@ import { useDispatch } from "react-redux";
 import { deleteData, editData } from "../Redux/action";
 
 const Tbodydata = (data) => {
-  const { img, title, price, category, id } = data.data;
+  const { img, title, price, category, id ,rating} = data.data;
   const initState = {
     img: img,
     title: title,
     price: price,
     category: category,
     id: id,
+    rating: rating,
   }
   const [ editFormData , setEdited ] = useState(initState);
   const dispatch = useDispatch();
@@ -87,7 +88,7 @@ setEdited({...editFormData, [name]: value})
             
             <FormControl mt={4}>
               <FormLabel>Rating</FormLabel>
-              <Input placeholder='Rating' />
+              <Input placeholder='Rating' value={editFormData.rating} onChange={handleChange} name="rating"/>
             </FormControl>
 
           </ModalBody>

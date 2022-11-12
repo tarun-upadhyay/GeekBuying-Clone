@@ -3,13 +3,30 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addData } from '../Redux/action';
 import { BsHeart } from "react-icons/bs";
+import { Link } from 'react-router-dom';
+
 
 const Product = () => {
   const dispatch = useDispatch();
   dispatch(addData)
   const data = useSelector((store)=> store.products)
-  const [ newData , setNewData ]  = useState(data)
-console.log(newData.sort((a,b)=>a.price - b.price))
+
+
+
+ const [ newData , setNewData ] = useState(data)
+
+
+  
+const handleChange = (e)=>{
+let val = e.target.value;
+if(val == "htl"){
+  setNewData([...newData.sort((a,b)=> a.price -b.price)])
+}else{
+  setNewData([...newData.sort((b,a)=> a.price - b.price)])
+}
+
+}
+
   
   return (
     <Box bg="#f2f2f2">
@@ -42,20 +59,26 @@ console.log(newData.sort((a,b)=>a.price - b.price))
           </Stack>
           <Stack mt="30px" direction='row' spacing={4} align='center'>
           <Text w="100px">Sort By :</Text>
-          <Button colorScheme='black' variant='outline' h="25px" w="100px">Best Match</Button>
-          <Button colorScheme='black' variant='outline' h="25px" w="100px">New Arrival</Button>
-          <Button colorScheme='black' variant='outline' h="25px" w="60px" >Price</Button>
+          <Button colorScheme='black' variant='outline' h="25px" w="120px">Best Match</Button>
+          <Button colorScheme='black' variant='outline' h="25px" w="120px">New Arrival</Button>
+          {/* <Button colorScheme='black' variant='outline' h="25px" w="60px"></Button> */}
+            <Select variant='outline' placeholder='Price' w="90px" h="25px" onChange={handleChange}>
+            <option value='lth' >High To Low</option>
+            <option value='htl'>Low To High</option>
+            </Select>
           </Stack>
         </Box>
           <Grid templateColumns='repeat(4, 1fr)' gap={6} m="15px">
             {
-              data.map((el)=>{
-               return <GridItem key={el.id} bg="white" p="5px">
+        newData.map((el)=>{
+               return <Link to="/cart">
+               <GridItem key={el.id} bg="white" p="5px">
                   <Image src={el.img}></Image>
                   <Text lineHeight="22px">{el.title}</Text>
                   <Text mt="2px" fontSize="20px" fontWeight="bold">₹ {el.price}</Text>
                   <Box display="flex" mt="5"><BsHeart/><Text ml="5px" mt="-1">{el.rating}</Text></Box>
                 </GridItem>
+               </Link>
               })
             }
           </Grid>

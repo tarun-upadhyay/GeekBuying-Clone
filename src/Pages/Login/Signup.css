@@ -1,0 +1,67 @@
+.outerDiv{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: larger;
+  text-align: center;
+  
+}
+.innerDiv{
+  width:450px;
+  margin:auto;
+  padding:25px;
+  height:auto;
+  background-color: rgb(250, 249, 249);
+  transition: all .3s;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+.innerDiv .formInput{
+  height:20px;
+  width:200px;
+  border:1px solid black;
+}
+.outerDiv .formInput{
+  padding:5px;
+  margin-top: 20px;
+  font-size: 14px;
+  border-color: rgb(219, 224, 224);
+  box-shadow: none;
+  height:40px;
+  width:350px;
+}
+.outerDiv h3{
+  margin:0%;
+  line-height: 1;
+  padding-bottom: 20px;
+  font-weight:bold;
+  text-align:center;
+}
+label{
+  font-weight:600;
+}
+.forgot-password,
+.forgot-password{
+text-align:right;
+font-size:19px;
+}
+
+
+.s{
+  padding:5px;
+  margin-top: 20px;
+  font-size: 14px;
+  height:40px;
+  width:350px;
+background-color: rgb(245, 161, 7);
+}
+.hint{
+  font-size: 20px;
+  color:black;
+  font-weight:bold;
+}
+Alert{
+  font-size: larger;
+  color:rgb(245, 161, 7);
+}
+
+

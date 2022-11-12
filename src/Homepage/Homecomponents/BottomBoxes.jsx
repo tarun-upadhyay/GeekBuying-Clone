@@ -7,7 +7,7 @@ const TopBoxes = () => {
   return (
     <Stack>
       <Flex>
-        <Heading fontSize={{ base: "1rem", md: "1.5rem", lg: "2.1rem" }}>Deal Of The Day</Heading><Spacer/> <Timer/>
+        <Heading size={"lg"}>Deal Of The Day</Heading>
       </Flex>
       <Flex>
         {data.map((item, i) => {
