@@ -4,6 +4,7 @@ const initialState = {
   products: getLocalData("products_data") || [],
 };
 
+
 export const reducer = (oldState = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
