@@ -1,6 +1,6 @@
-import { Badge, Box, Image } from "@chakra-ui/react";
+import { Badge, Box, Image, Text } from "@chakra-ui/react";
 
-export const SellerCard = () => {
+export const SellerCard = ({ item }) => {
   return (
     <Box>
       <Image src={"https://img.gkbcdn.com/p/2019-11-30/tws-i500-earphones-20191130100234539._w280_p1_.jpg"} />

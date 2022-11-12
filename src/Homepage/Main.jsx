@@ -1,6 +1,7 @@
 import { Box, Container, Flex, HStack, Stack, VStack } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import BannerSlider from "./Homecomponents/BannerSlider";
+import { BestSeller } from "./Homecomponents/BestSeller";
 import { Enjoylife } from "./Homecomponents/Enjoylife";
 import { NewFor } from "./Homecomponents/NewFor";
 import Timer from "./Homecomponents/Timer";
@@ -21,6 +22,7 @@ const Main = () => {
       <Trendingproduct />
       <NewFor />
       <Enjoylife />
+      <BestSeller />
     </Box>
   );
 };
