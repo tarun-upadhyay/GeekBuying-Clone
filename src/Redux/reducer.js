@@ -5,6 +5,7 @@ const initialState = {
   details: [],
 };
 
+
 export const reducer = (oldState = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
