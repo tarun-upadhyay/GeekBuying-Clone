@@ -1,14 +1,18 @@
 import { Box, Button, Flex, Grid, GridItem, Image, Select, Stack, Text } from '@chakra-ui/react';
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addData } from '../Redux/action';
 import { BsHeart } from "react-icons/bs";
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Product = () => {
   const dispatch = useDispatch();
   dispatch(addData)
   const data = useSelector((store)=> store.products)
+
+
+
  const [ newData , setNewData ] = useState(data)
 
 
@@ -22,6 +26,7 @@ if(val == "htl"){
 }
 
 }
+
   
   return (
     <Box bg="#f2f2f2" w="100%">
@@ -111,12 +116,14 @@ if(val == "htl"){
           <Grid templateColumns={{base:'repeat(2, 1fr)', md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)" }} gap={6} m="15px">
             {
         newData.map((el)=>{
-               return <GridItem key={el.id} bg="white" p="5px">
+               return <Link to="/cart">
+               <GridItem key={el.id} bg="white" p="5px">
                   <Image src={el.img}></Image>
                   <Text lineHeight="22px">{el.title}</Text>
-                  <Text mt="2px" fontSize="20px" fontWeight="bold">€{el.price}</Text>
+                  <Text mt="2px" fontSize="20px" fontWeight="bold">₹ {el.price}</Text>
                   <Box display="flex" mt="5"><BsHeart/><Text ml="5px" mt="-1">{el.rating}</Text></Box>
                 </GridItem>
+               </Link>
               })
             }
           </Grid>

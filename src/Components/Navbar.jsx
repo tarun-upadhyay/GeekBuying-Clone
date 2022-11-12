@@ -1,4 +1,5 @@
 import "./Nav.css";
+import { Link } from "react-router-dom";
 import { ImMobile2 } from "react-icons/im";
 import { CgShoppingCart } from "react-icons/cg";
 import { AiOutlineUser } from "react-icons/ai";
@@ -37,7 +38,7 @@ const Navbar = () => {
     }
     return (
         <div id="navbarDiv">
-            <div id="logoDiv"><img src={Logo} alt="" /></div>
+            <Link to={"/"}><div id="logoDiv"><img src={Logo} alt="" /></div></Link>
             
             <div id="search_Div">
                 <div id="search_Div_sub">All Categories <IoMdArrowDropdown/></div>
@@ -94,8 +95,10 @@ const SignInPop = () => {
             <div id="signPointer"></div>
             <div id="welcomeGreet">Welcome to Geekbuying</div>
             <div id="buttonDivSignInPop">
+            <Link to='/login'>
                 <button id="joinBtn">Join</button>
                 <button id="signInBtn">Sign In</button>
+            </Link>
             </div>
             <div id="topDiv"></div>
             <div id="orDiv">or</div>
@@ -160,8 +163,8 @@ const Arrow = ({icon,text}) => {
                     {mount ? <NavbarBottomDrop1 ></NavbarBottomDrop1> : null}
                 </div>
                 
-                <div className="NavbarBottomSub">New</div>
-                <div className="NavbarBottomSub">Bestselling</div>
+                <Link to={"/product"}><div className="NavbarBottomSub">New</div></Link>
+                <Link to={"/product"}><div className="NavbarBottomSub">Bestselling</div></Link>
                 <div className="NavbarBottomSub">Brand</div>
                 <div className="NavbarBottomSub">Clearance</div>
                 <div className="NavbarBottomSub">Deals</div>
