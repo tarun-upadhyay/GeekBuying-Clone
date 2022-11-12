@@ -45,11 +45,11 @@ return (
      
             </div>
             <Link to="/Cart"><button type="submit" className='s'>Login</button></Link>
-            {flag && (
-               <Alert color ="primary" variant='danger'>
-                  Please Fill Correct Info 
-               </Alert> 
-            )}
+            {/* {flag && (
+            //    <Alert color ="primary" variant='danger'>
+            //       Please Fill Correct Info 
+            //    </Alert> 
+            )} */}
 
             </form>
     </div>

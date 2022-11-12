@@ -121,8 +121,14 @@ const detailPage = ()=>{}
                   <Text mt="2px" fontSize="20px" fontWeight="bold">₹ {el.price}</Text>
                   <Box display="flex" mt="5"><BsHeart/><Text ml="5px" mt="-1">{el.rating}</Text></Box>
                 </GridItem>
+
+               </Link>
+
+})
+
               
               })
+
             }
           </Grid>
       </Box>
