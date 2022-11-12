@@ -24,17 +24,62 @@ if(val == "htl"){
 }
   
   return (
-    <Box bg="#f2f2f2">
+    <Box bg="#f2f2f2" w="100%">
     <Box textAlign="center" p="30px" fontSize="30px" bg="white">New Arrivals</Box>
     <Flex w="85%" justifyContent="space-between" margin="auto" bg="#f2f2f2">
       <Box bg="white" w="330px" m="15px">
         <Text mb="20px" pl="5px" fontWeight="bold">All Categories</Text>
         <Stack pl="5px">
-        <Select variant='unstyled' placeholder='Consumer Electronics'></Select>
-        <Select variant='unstyled' placeholder='Sports & Outdoors'></Select>
-        <Select variant='unstyled' placeholder='Smart Home & Garden'></Select>
-        <Select variant='unstyled' placeholder='Computers, Tablets & Accessories'></Select>
-        <Select variant='unstyled' placeholder='Toys & Hobbies'></Select>
+        <Select variant='unstyled' placeholder='Consumer Electronics'>
+          <option>Earbud Headphones</option>
+          <option>FDM 3D Printers</option>
+          <option>Laser Engravers & Cutters</option>
+          <option>3D Printer Accessories</option>
+          <option>Heat Press Machine</option>
+          <option>Projectors</option>
+          <option>Accessories</option>
+          <option>Measurement & Analysis</option>
+          <option>Maintenance & Repair Tools</option>
+          <option>Handheld Game Consoles</option>
+          <option>PlayStation</option>
+          <option>Others</option>
+        </Select>
+        <Select variant='unstyled' placeholder='Sports & Outdoors'>
+          <option>Fitness & Body Building</option>
+          <option>Water Sports</option>
+          <option>Bikes</option>
+          <option>Electric Scooters</option>
+          <option>Winter Sports</option>
+          <option>Travel Supplies</option>
+          <option>Other Accessories</option>
+        </Select>
+        <Select variant='unstyled' placeholder='Smart Home & Garden'>
+          <option>Robot Vacuum Cleaners</option>
+          <option>Cordless Vacuum Cleaners</option>
+          <option>Cookware</option>
+          <option>Kitchen Appliances</option>
+          <option>Personal Care</option>
+          <option>Oral Care</option>
+          <option>LED Outdoor Lights</option>
+          <option>Robot Vacuum Cleaner</option>
+          <option>Cordless Vacuum Cleaner</option>
+          <option>Others</option>
+        </Select>
+        <Select variant='unstyled' placeholder='Computers, Tablets & Accessories'>
+          <option>Android Tablets</option>
+          <option>Wired Keyboards</option>
+          <option>Wired Mouse</option>
+          <option>Adapters</option>
+          <option>SSD & HDD & Enclosures</option>
+          <option>Other Accessories</option>
+          <option>Ultrabooks</option>
+          <option>Monitors</option>
+        </Select>
+        <Select variant='unstyled' placeholder='Toys & Hobbies'>
+          <option>RC Quadcopters</option>
+          <option>RC Boats</option>
+          <option>RC Cars</option>
+        </Select>
         <Select variant='unstyled' placeholder='Wearable Devices'></Select>
         <Select variant='unstyled' placeholder='TV Boxes & Mini PCs'></Select>
         <Select variant='unstyled' placeholder='Automobiles & Motorcycles'></Select>
@@ -63,7 +108,7 @@ if(val == "htl"){
             </Select>
           </Stack>
         </Box>
-          <Grid templateColumns='repeat(4, 1fr)' gap={6} m="15px">
+          <Grid templateColumns={{base:'repeat(2, 1fr)', md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)" }} gap={6} m="15px">
             {
         newData.map((el)=>{
                return <GridItem key={el.id} bg="white" p="5px">
