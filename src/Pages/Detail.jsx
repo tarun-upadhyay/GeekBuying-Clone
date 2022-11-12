@@ -1,3 +1,4 @@
+ 
 import React, { useState } from "react";
 import styles from "./detail.module.css";
 import { Link } from "react-scroll";
@@ -5,6 +6,9 @@ import Description from "../Pages/Description";
 import Review from "../Pages/Review";
 import Qa from "../Pages/QA";
 import "./scroll.css"
+ 
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Detail = () => {
   const [count, setCount] = useState(1);
@@ -14,6 +18,8 @@ const Detail = () => {
   const handleRemove = () => {
     setCount(count - 1);
   };
+ 
+ 
   return (
     <div>
       <div id={styles.main}>
@@ -144,6 +150,8 @@ const Detail = () => {
       </div>
     </div>
   );
-};
+  };
+
+
 
 export default Detail;
