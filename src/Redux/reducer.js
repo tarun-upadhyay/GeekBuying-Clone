@@ -5,7 +5,6 @@ const initialState = {
   details: [],
 };
 
-
 export const reducer = (oldState = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
@@ -39,21 +38,20 @@ export const reducer = (oldState = initialState, action) => {
         ...oldState,
         products: afterdel,
       };
-      case types.EDIT_PRODUCTS_LS:
-        const before = [...oldState.products]
-        let after = [payload]
-        let res = before.map(obj => after.find(o => o.id === obj.id) || obj)
-       saveData("products_data", res);
-       return{
+    case types.EDIT_PRODUCTS_LS:
+      const before = [...oldState.products];
+      let after = [payload];
+      let res = before.map((obj) => after.find((o) => o.id === obj.id) || obj);
+      saveData("products_data", res);
+      return {
         ...oldState,
         products: res,
-       }
-       case types.DETAIL_PAGE:
-        console.log(payload)
-        return{
-          ...oldState,
-          details: payload
-        }
+      };
+    case types.DETAIL_PAGE:
+      return {
+        ...oldState,
+        details: payload,
+      };
 
     default:
       return oldState;
