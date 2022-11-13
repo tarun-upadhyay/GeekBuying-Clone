@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Alert } from "react-bootstrap";
-import "./Signup.css";
+import "./signin.css";
 import { useDispatch, useSelector } from "react-redux";
 import { adminLoginRequest, loginRequest } from "../../Redux/Auth/action";
 const Login = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [emaillogIn, setEmaillogIn] = useState("");
   const [passwordlogIn, setPasswordlogIn] = useState("");
   const dispatch = useDispatch();
@@ -15,49 +15,43 @@ const Login = () => {
     let data = { email: emaillogIn, password: passwordlogIn };
     if (emaillogIn === "admin@admin.com" && passwordlogIn === "admin") {
       dispatch(adminLoginRequest(data));
-     
     } else {
       dispatch(loginRequest(data));
-      
     }
   }
 
- 
-if(store.isAdmin){
-  navigate("/admin")
-}
+  if (store.isAdmin) {
+    navigate("/admin");
+  }
   return (
     <div>
-      <form onSubmit={handleLogin}>
-        <h3>Sign In</h3>
-        <div className="formInputgroup">
-          <input
-            type="text"
+      
+       
+        <div id="signin_pare">
+        <h3 id="sign">Sign In</h3>
+          
+          <form onSubmit={handleLogin}>
+            
+            <input id="mail"  type="text"
             className="formInput"
             placeholder="Email address"
-            onChange={(event) => setEmaillogIn(event.target.value)}
-          />
-        </div>
-        <div className="formInputgroup">
-          <input
-            type="password"
+            onChange={(event) => setEmaillogIn(event.target.value)}/><br/>
+            <input  type="password"
             className="formInput"
             placeholder="Password"
-            onChange={(event) => setPasswordlogIn(event.target.value)}
-          />
-          <br />
+            onChange={(event) => setPasswordlogIn(event.target.value)} /><br/>
+            <input type="submit" value="SIGN IN"/><br/>
+        </form>
         </div>
 
-        <button type="submit" className="s">
-          Login
-        </button>
+       
 
         {/* {flag && (
             //    <Alert color ="primary" variant='danger'>
             //       Please Fill Correct Info 
             //    </Alert> 
             )} */}
-      </form>
+       
     </div>
   );
 };

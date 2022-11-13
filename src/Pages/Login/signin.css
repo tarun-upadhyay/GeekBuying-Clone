@@ -1,0 +1,42 @@
+form{
+    width: 300px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+form>input,#password{
+    padding: 10px ;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(167, 164, 164);
+    width: 300px;
+    height: 35px;
+    background-color: rgb(247, 245, 245);
+    display: block;
+    margin: auto;
+}
+input[type=submit] {
+    width: 19em;  height: 3em;
+    border: 0px;
+    border-radius: 13px;
+    color: rgb(0, 0, 0);
+}
+input[type=submit]:hover {
+    background-color: rgb(243, 102, 9);
+    color: white;
+    font-weight: bold;
+    
+}
+#sign{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+#mail{
+    width: 300px;
+}
+
+#signin_pare{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
