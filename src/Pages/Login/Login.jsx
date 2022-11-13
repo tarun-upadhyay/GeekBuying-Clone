@@ -25,10 +25,7 @@ const Login = () => {
     navigate("/admin");
   }
  
-          
-  else {
-      dispatch(loginRequest(data));
-    }
+  
     
     
   
