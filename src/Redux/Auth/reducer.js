@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+ 
 import { getLocalData, saveData } from "../../Utils/localStorageData";
 import * as types from "./actionType";
 const initialState = {
