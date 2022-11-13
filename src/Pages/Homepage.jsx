@@ -1,14 +1,12 @@
-import { Container, HStack } from "@chakra-ui/react"
-import Main from "../Homepage/Main"
+import { Container, HStack } from "@chakra-ui/react";
+import Main from "../Homepage/Main";
 
 const Homepage = () => {
   return (
-    <HStack>
-    <Container>
-    <Main/>
-    </Container>
+    <HStack margin={"auto"} justifyContent={"center"}>
+      <Main />
     </HStack>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

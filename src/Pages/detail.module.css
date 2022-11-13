@@ -1,0 +1,242 @@
+ 
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 45em;
+   box-shadow: aliceblue;
+    margin: auto;
+}
+#image{
+    height: 40em;
+    width: 35%;
+    margin: auto;
+   
+    
+}
+#image>img{
+    width: 100%;
+    height: 50%;
+    margin-top: 2em;
+}
+#detail{
+    height: 30em;
+    width: 55%;
+    border: 1px rgb(167, 122, 37);
+    margin: auto;
+}
+#title{
+    font-weight: bold;
+    font-size: 25px;
+}
+.aboutPro{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 55%;
+    height: 10%;
+    gap: 15px;
+    margin-top: 15px;
+    margin-left: -35px;
+
+}
+.aboutPro>p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.price{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 10%;
+    gap: 10px;
+}
+.price>p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.coupon{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 10%;
+    gap: 10px;
+}
+.coupon>p{
+    font-weight: bold;
+}
+.count{
+    display: flex;
+    align-items: center;
+    justify-content:safe;
+    width: 40%;
+    height: 10%;
+    gap: 10px;
+     
+}
+.count>p{
+    font-weight: bold;
+}
+.buttonSec{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 35%;
+    height: 10%;
+    margin-top: 15px;
+}
+.btn:hover{
+    padding: 15px 15px 15px 15px;
+    font-size: 12px;
+    margin: 0px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: blue;
+    color:white;
+    border: blue;
+    cursor: pointer;
+}
+.buttonSec>button{
+    padding: 15px 15px 15px 15px;
+    font-size: 12px;
+    margin: 0px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: blue;
+    color:white;
+    border: blue;
+    cursor: pointer;
+}
+.pa{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 83%;
+    height: 10%;
+    gap: 10px;
+    margin-top: 35px;
+}
+.ima{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 38%;
+    height: 10%;
+    gap: 10px;
+    
+}
+.pay>p>img{
+height: 30px;
+width: 70px;
+position: absolute;
+margin-top: -20px;
+margin-left: 100px;
+}
+.pay>p{
+    margin-top: 14px;
+    font-weight: bold;
+}
+ .pa>p{
+    font-weight: bold;
+ }
+
+.media{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-top:10em;
+
+}
+a{
+    text-decoration: none;
+    
+}
+.media>img{
+    height: 45px;
+    width: 50px;
+    cursor: pointer;
+}
+#sugg{
+    
+    height: 15rem;
+    width: 80%;
+    margin: auto;
+    box-shadow: cornsilk;
+}
+#you{
+    margin-left: 10em;
+    font-size: 16px;
+    margin-top: -2em;
+    font-weight: bold;
+}
+#slide{
+    height: 7em;
+    width: 100%;
+    margin: auto;
+    border: 1px solid red;
+    margin-top: 7em;
+}
+.feeding{
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: safe;
+    gap: 25px;
+    padding: 5px 15px 5px 10px;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#desc{
+    height: 90vh;
+    width: 90%;
+    margin-top: 90px;
+    font-size: medium;
+}
+#desc>p{
+    font-weight: lighter;
+    font-size: 16px;
+
+}
+#desc>h3{
+    font-weight: bold;
+    font-size: 18px;
+}
+.imgdesc{
+    height: 15em;
+    width: 100%;
+    margin-top: -8em;
+}
+.imgdesc>img{
+    height: 15em;
+    margin: auto;
+    width: 98%;
+}
+.review{
+    height:100vh;
+    width: 120vh;
+    margin: auto;
+    margin-left: 25vh;
+    margin-top: 90vh;
+    position: absolute;
+}
+.ques>h1{
+    font-size: 26px;
+    font-weight: bold;
+    
+}
+.ques>h1+p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.ques{
+    margin-top: -50vh;
+     margin-left: 60vh;
+}

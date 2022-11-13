@@ -1,0 +1,463 @@
+#navTop{
+    background-image: linear-gradient(to top, #2686FB, #318FFB);
+    border-bottom: 1px solid #5CA4FD;
+    height: 36px;
+    color: white;
+    display: flex;
+}
+#navTop_content{
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    width: 80%;
+    margin: auto;
+}
+#navTop_content div{
+    cursor: pointer;
+}
+
+.navTop_content_sub p{
+    margin: 0px 3px;
+}
+#navbarDiv{
+    background-image: linear-gradient(to top,#0B6FFE, #2585FC);
+    height: 90px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navTop_content_sub{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 20px 0px 0px;
+    font-size: 14px;
+}
+#logoDiv{
+    height: 50px;
+    width: 190px;
+    cursor: pointer;
+}
+#logoDiv img{
+    width: 100%;
+    height: 100%;
+}
+#search_Div{
+    border: 1px solid rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 48px;
+    background-color: white;
+    border-radius: 5px;
+}
+#search_Div_sub{
+    margin: 0px 10px;
+    padding: 0px 10px 0px 0px;
+    width: 130px;
+    border-right: 1px solid #666666;
+    height: 20px;
+    color: #666666;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+#search_Div input{
+    width: 450px;
+    height: 48px;
+    padding: 0px 5px;
+    color: #333333;
+}
+#search_Div input:focus{
+    outline: none;
+}
+#searchIcon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #2988FB;
+    cursor: pointer;
+}
+
+#shippingMainDiv{
+    cursor: pointer;
+}
+#shippingDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+}
+#accountDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+    height: 50px;
+}
+#indianFlag{
+    height: 20px;
+    width: 22px;
+}
+#currencyDiv{
+    display: flex;
+}
+#signInDiv{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    cursor: pointer;
+}
+#signInDiv p{
+    font-size: 20px;
+}
+#cartDiv{
+    font-size: 33px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#cartCounter{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: relative;
+    left: -12px;
+    top: -10px;
+    background-color: rgb(248, 7, 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+#NavbarBottom{
+    background-color: #2988FB;
+    background-image: linear-gradient(to top, #0066FF, #0A6FFE);
+    position: relative;
+    z-index: 10;
+}
+#NavbarBottomContent {
+    height: 56px;
+    width: 1600px;
+    color: white;
+    display: flex;
+    margin: auto;
+    font-weight: 600;
+    font-size: 20px;
+}
+#NavbarBottomCategories{
+    background-image: linear-gradient(to top, #1371ff, #207dff);
+    display: flex;
+    width: 120px;
+    background-color: #3b90f9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    left: 0px;
+}
+.NavbarBottomSub{
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -0px;
+    cursor: pointer;
+}
+#NavbarBottomDrop1{
+    border: 1px solid rgb(235, 235, 235);
+    background-color: white;
+    height: 400px;
+    width: 226px;
+    position: relative;
+    top:225px;
+    left: -110px;
+    margin-right: -226px;
+    cursor: pointer;
+}
+#NavbarBottomDrop1 ul{
+    list-style-type:none;
+    color: #46474A;
+    font-size: 18px;
+}
+
+#NavbarBottomDrop2 {
+    box-sizing: content-box;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: 1px solid transparent;
+    background-color: white;
+    height: 435px;
+    position: relative;
+    left: 225px;
+    top: -433px;
+    color: #333333;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: medium;
+}
+#NavbarBottomDrop1 li{
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding:10px;
+    background-color: #FFFFFF;
+    font-weight: 400;
+    font-size: medium;
+}
+#NavbarBottomDrop1 li:hover{
+    border-left: 3px solid #3b90f9;
+    background-color: #F1F6FD;
+}
+
+.class00{
+    width: 600px;
+}
+.class01 {
+    width: 500px;
+}
+.class02 {
+    width: 800px;
+}
+.class1{
+    width: 1000px;
+}
+.class2{
+    width: 1200px;
+}
+.class3{
+    width: 1400px;
+}
+.NavbarBottomDropItems{
+    margin: 0px 0px 0px 0px;
+    box-sizing: content-box;
+    max-height: 435px;
+    width: 200px;
+}
+#NavbarBottomDrop2 dl{
+    margin: 0px 10px 12px 10px;
+    width: 200px;
+    display: inline-block;
+}
+dt{
+    font-size: 15px;
+    cursor: pointer;
+}
+dd{
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.imgDiv{
+    margin: 85px 0px 0px -60px;
+    height: 405px;
+    width: 400px;
+}
+
+
+#shippingPopDiv{
+    position: absolute;
+    z-index: 20;
+    top: 118px;
+    left: 1160px;
+    border: 1px solid rgb(224, 224, 224);
+    height: 225px;
+    width: 351px;
+    border-radius: 8px;
+    color: #333333;
+    background-color: white;
+    padding:0px 20px;
+}
+#pointer{
+    border: 10px solid transparent;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 86%;
+    top: -11.4%;
+    border-bottom: 15px solid white;
+}
+#shippingPopDiv li{
+    list-style-type:none;
+    border: 1px solid rgb(200, 200, 200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border-radius: 3px;
+    cursor:pointer;
+}
+#shippingPopDiv li >div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4px 20px;
+    height: 30px;
+}
+#shippingPopDiv li>div>img{
+    height: 100%;
+}
+#shippingPopDiv h4{
+    font-size: 92%;
+    padding: 0px;
+    margin: 0px;
+}
+#shippingPopDiv h3 {
+    font-size: 93%;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+}
+#shippingPopDiv button{
+    height: 30px;
+    width: 68px;
+    border-radius: 3px;
+    background-color: #0066FF;
+    color: white;
+    position: relative;
+    left: 78%;
+    margin: 10px 0px;
+}
+/**********SHIPPING POP********/
+
+/*********SIGN IN POP**************/
+#signInPop{
+    border: 1px solid rgb(228, 228, 228);
+    height: 180px;
+    width: 290px;
+    border-radius: 8px;
+    background-color: white;
+    color: #333333;
+    position: absolute;
+    z-index: 20;
+    top: 112px;
+    padding: 10px 20px;
+}
+#signPointer{
+    height: 30px;
+    width: 30px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: relative;
+    left: 112px;
+    top: -30px;
+}
+#welcomeGreet{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    padding: 0px;
+    height: 25px;
+}
+#buttonDivSignInPop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 254px;
+    position: relative;
+    top: -18px;
+}
+#joinBtn{
+    height: 36px;
+    width: 120px;
+    border-radius: 4px;
+    background-color: #0066FF;
+    color: white;
+    font-size: 15px;
+}
+#signInBtn{
+    height: 36px;
+    width: 120px;
+    border-radius: 4px;
+    color: #0066FF;
+    background-color:#E5EFFF;
+    font-size: 15px;
+    border: 1px solid #0066FF;
+}
+#topDiv{
+    position: relative;
+    top: -18px;
+    height: 16px;
+    width: 254px;
+    border-bottom: 1px solid #E6E7E8;
+}
+#orDiv{
+    background-color: white;
+    width: 30px;
+    height: 18px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    left:111px;
+    color: #999999;
+}
+#googleAuthDiv{
+    height: 50px;
+    width: 50px;
+    border: 1px solid #dcdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: -16px;
+}
+#cartPopDiv{
+    border: 1px solid rgb(214, 214, 214);
+    max-height: 450px;
+    width: 360px;
+    border-radius: 8px;
+    background-color: white;
+    position: absolute;
+    z-index: 20;
+    top: 116px;
+    left: 1420px;
+    padding: 20px;
+}
+#cartPointer{
+    height: 30px;
+    width: 30px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid white;
+    position: relative;
+    top: -50px;
+    left: 246px;
+}
+
+#cartTotal{
+    height: 36px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#cartPopButton{
+    height: 40px;
+    width: 320px;
+    background-color: #0066FF;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+}
+#cartItems{
+    max-height: 304px;
+    height: 304px;
+    width: 320px;
+    border-bottom: 1px solid rgb(217, 217, 217);
+}

@@ -2,6 +2,8 @@ import { getLocalData, saveData } from "../Utils/localStorageData";
 import * as types from "./actionType";
 const initialState = {
   products: getLocalData("products_data") || [],
+  details: [],
+  cart: [],
 };
 
 export const reducer = (oldState = initialState, action) => {
@@ -30,22 +32,35 @@ export const reducer = (oldState = initialState, action) => {
       };
     case types.DEL_PRODUCTS_LS:
       let afterdel = [
-        ...oldState.products.filter((el) => el.title != payload.title),
+        ...oldState.products.filter((el) => el.title !== payload.title),
       ];
       saveData("products_data", afterdel);
       return {
         ...oldState,
         products: afterdel,
       };
-      case types.EDIT_PRODUCTS_LS:
-        const before = [...oldState.products]
-        let after = [payload]
-        let res = before.map(obj => after.find(o => o.id == obj.id) || obj)
-       saveData("products_data", res);
-       return{
+    case types.EDIT_PRODUCTS_LS:
+      const before = [...oldState.products];
+      let after = [payload];
+      let res = before.map((obj) => after.find((o) => o.id === obj.id) || obj);
+      saveData("products_data", res);
+      return {
         ...oldState,
         products: res,
-       }
+      };
+    case types.DETAIL_PAGE:
+      return {
+        ...oldState,
+        details: payload,
+      };
+      case types.ADD_TO_CART:
+      console.log(payload)  
+      let cartStore = [payload]
+      saveData("cart", cartStore)
+      return{
+          ...oldState,
+cart: cartStore
+        }
 
     default:
       return oldState;
