@@ -9,7 +9,7 @@ const Manage = () => {
   const dispatch = useDispatch();
   
   dispatch(addData);
-  const data = useSelector((store)=> store.products)
+  const data = useSelector((store)=> store.AppReducer.products)
   return (
     
     <Box>

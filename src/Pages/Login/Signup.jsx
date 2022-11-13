@@ -1,86 +1,97 @@
-import React,{useState} from 'react'
-import {Alert} from 'react-bootstrap';
-import Login from './Login';
-import './Signup.css';
-const Register = () => { 
-    const [name,setName]=useState("");
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-    const [phone,setPhone]=useState("");
-    const [flag,setFlag]=useState(false);
-    const [login,setLogin]=useState(true);
-    
-    function handleSubmit(e) {
-        e.preventDefault();
+import React, { useState } from "react";
+import { Alert } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { signUpRequest } from "../../Redux/Auth/action";
+import Login from "./Login";
+import "./Signup.css";
 
-        if(!name|| !email ||!password ||!phone){
-            setFlag(true);
+const initState = {
+    name: "",
+    email: '',
+    password: '',
+    mobile: "",
+}
+const Register = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+    const [ data, setData   ] = useState(initState);
+    const { name, email, password, mobile } = data
+const handleChange = (e)=>{
+    const { name, value } = e.target;
+    setData({...data, [name]: value})   
+}
 
-        }
-        else{
-            setFlag(false);
-            localStorage.setItem("Email",JSON.stringify(email));
-            localStorage.setItem("Password",JSON.stringify(password));
-            console.log("Saved LS");
-            setLogin(!login);
-
-        }
-
-    }
-    function handleClick(){
-        setLogin(!login);
-    }
-
+const handleSubmit = (e)=>{
+    e.preventDefault()
+  setData(initState)
+    dispatch(signUpRequest(data))
+  navigate("/login")
+}
   return (
     <div className="box">
-           <div className='outerDiv'>
-           <div className='innerDiv'>
-        {login ? (
-
-        <form onSubmit={handleSubmit}>
+      <div className="outerDiv">
+        <div className="innerDiv">
+          <form onSubmit={handleSubmit}>
             <h3>Create Your Account</h3>
-            <div className='formInputgroup'>
-                <input type='text' className='formInput'
-                 placeholder='Nick Name'
-                 onChange={(event)=> setName(event.target.value)} />
+            <div className="formInputgroup">
+              <input
+                type="text"
+                className="formInput"
+                placeholder="Nick Name"
+                onChange={handleChange}
+                name="name"
+                value={name}
+              />
+            </div>
+            <div className="formInputgroup">
+              <input
+                type="email"
+                className="formInput"
+                placeholder="Email address"
+                onChange={handleChange}
+                name="email"
+                value={email}
+              />
+            </div>
+            <div className="formInputgroup">
+              <input
+                type="password"
+                className="formInput"
+                placeholder=" Password"
+                onChange={handleChange}
+                name="password"
+                value={password}
+              />
+            </div>
+            <div className="formInputgroup">
+              <input
+                type="number"
+                className="formInput"
+                placeholder="Enter mobile number"
+                onChange={handleChange}
+                name="mobile"
+                value={mobile}
 
+              />
             </div>
-            <div className='formInputgroup'>
-                <input type='text' className='formInput'
-                 placeholder='Email address'
-                 onChange={(event)=> setEmail(event.target.value)} />
-                
-            </div>
-            <div className='formInputgroup'>
-                <input type='password' className='formInput'
-                 placeholder=' Password'
-                 onChange={(event)=> setPassword(event.target.value)} />
-                
-            </div>
-            <div className='formInputgroup'>
-                <input type='text' className='formInput'
-                 placeholder='Enter mobile number'
-                 onChange={(event)=> setPhone(event.target.value)} />
-                
-            </div>
-            <input type="checkbox" />  
-                 <label>I agree to GeekBuying's Terms of Use & Privacy Policy.</label><br/>
-            <button type="submit" className='s'>Create Account</button>
-            <p className='hint' onClick={handleClick} >Alread Registered login ?</p>
-
-            {flag && (
-               <Alert color ="primary" variant='danger'>
-                  Please Fill Every Field 
-               </Alert> 
-            )}
-        </form>
-        ):(
-            <Login />
-        )}
+            <input type="checkbox" />
+            <label>
+              I agree to GeekBuying's Terms of Use & Privacy Policy.
+            </label>
+            <br />
+            <button type="submit" className="s">
+              Create Account
+            </button>
+            <Link to="/login">
+            <p className="hint" >
+              Already Registered login ?
+            </p></Link>
+          </form>
         </div>
-          </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Register;

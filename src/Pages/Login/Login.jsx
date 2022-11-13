@@ -1,59 +1,74 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom';
-import {Alert} from "react-bootstrap";
-import './Signup.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Alert } from "react-bootstrap";
+import "./signin.css";
+import { useDispatch, useSelector } from "react-redux";
+import { adminLoginRequest, loginRequest } from "../../Redux/Auth/action";
 const Login = () => {
-const [emaillogIn,setEmaillogIn]=useState("");
-const [passwordlogIn,setPasswordlogIn]=useState("");
-const [flag,setFlag]=useState(false);
-const [Homepage,setHomePage]=useState(true);
-function handleLogin(e){
+  const navigate = useNavigate();
+  const [emaillogIn, setEmaillogIn] = useState("");
+  const [passwordlogIn, setPasswordlogIn] = useState("");
+  const dispatch = useDispatch();
+  const store = useSelector((store) => store.AuthReducer);
+  function handleLogin(e) {
     e.preventDefault();
-    let email=localStorage.getItem("Email").replace(/"/g,"");
-    let password=localStorage.getItem("Password").replace(/"/g,"");
+    let data = { email: emaillogIn, password: passwordlogIn };
+    if (emaillogIn === "admin@admin.com" && passwordlogIn === "admin") {
+      dispatch(adminLoginRequest(data));
+ 
+    } else {
+      dispatch(loginRequest(data));
+    }
+  }
 
-    if(!emaillogIn || !passwordlogIn){
-        setFlag(true);
-        console.log("Empty");
+  if (store.isAdmin) {
+    navigate("/admin");
+  }
+ 
+          
+  else {
+      dispatch(loginRequest(data));
     }
-    else if(passwordlogIn !==password ||emaillogIn!==email){
-        setFlag(true)
-    }
-    else{
-        setHomePage(!Homepage);
-        setFlag(false)
-    }
-}
+    
+    
+  
 
-return (
+ if(store.isAuth){
+  navigate("/cart")
+ }
+
+ 
+  return (
     <div>
+      
        
-        <form onSubmit={handleLogin}>
-            <h3>Sign In</h3>
-<div className='formInputgroup'>  
-
-                <input type='text' className='formInput'
-                 placeholder='Email address'
-                 onChange={(event)=> setEmaillogIn(event.target.value)} />
-                
-            </div>
-            <div className='formInputgroup'>
+        <div id="signin_pare">
+        <h3 id="sign">Sign In</h3>
+          
+          <form onSubmit={handleLogin}>
             
-                <input type='password' className='formInput'
-                 placeholder=' Password'
-                 onChange={(event)=> setPasswordlogIn(event.target.value)} /><br/>
-     
-            </div>
-            <Link to="/Cart"><button type="submit" className='s'>Login</button></Link>
-            {flag && (
-               <Alert color ="primary" variant='danger'>
-                  Please Fill Correct Info 
-               </Alert> 
-            )}
+            <input id="mail"  type="text"
+            className="formInput"
+            placeholder="Email address"
+            onChange={(event) => setEmaillogIn(event.target.value)}/><br/>
+            <input  type="password"
+            className="formInput"
+            placeholder="Password"
+            onChange={(event) => setPasswordlogIn(event.target.value)} /><br/>
+            <input type="submit" value="SIGN IN"/><br/>
+        </form>
+        </div>
 
-            </form>
+       
+
+        {/* {flag && (
+            //    <Alert color ="primary" variant='danger'>
+            //       Please Fill Correct Info 
+            //    </Alert> 
+            )} */}
+       
     </div>
-  )
-}
+  );
+          };
 
 export default Login;

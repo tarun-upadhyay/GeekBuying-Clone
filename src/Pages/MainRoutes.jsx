@@ -9,20 +9,25 @@ import Product from "./Product";
 import Admin from "../Admin/Admin";
 import AddProduct from "../Admin/AddProduct";
 import Manage from "../Admin/Manage";
+import Login from "./Login/Login";
+
+import {PrivatRoute, SecondPrivate} from "../Components/PrivatRoute";
 const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Homepage />}></Route>
       <Route path="/product" element={<Product />}></Route>
       <Route path="/detail" element={<Detail />}></Route>
-      <Route path="/cart" element={<Cart />}></Route>
+      <Route path="/cart" element={<SecondPrivate><Cart /></SecondPrivate>}></Route>
       <Route path="/payment" element={<Payment />}></Route>
-      <Route path="login"  element={<Register/>}/>
-      <Route path="/admin" element={<Admin />}>
+      <Route path="/signup"  element={<Register/>}/>
+      <Route path="/login"  element={<Login/>}></Route>
+      <Route path="/admin" element={<PrivatRoute><Admin /></PrivatRoute>}>
         {" "}
-      </Route>
-      <Route path="/admin/addproduct" element={<AddProduct/>}></Route>
-     <Route path="/admin/manage" element={<Manage/>}></Route>
+      </Route> 
+      <Route path="/admin/addproduct" element={<PrivatRoute><AddProduct/></PrivatRoute>}></Route>
+     <Route path="/admin/manage" element={<PrivatRoute><Manage/></PrivatRoute>}></Route>
+     <Route path="/payment" element={<SecondPrivate><Payment/></SecondPrivate>}> </Route>
     <Route path="*" element={<h1> 404 Page Not Found</h1>}></Route>
     </Routes>
   );

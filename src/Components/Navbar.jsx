@@ -11,7 +11,11 @@ import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Logo from "../logo.png";
 import { navData } from "./data";
+
 const indianFlagpng = "https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from "../Redux/Auth/action";
+const indianFlagpng= "https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png";
 export const Nav = () => {
   return (
     <>
@@ -51,6 +55,63 @@ const Navbar = () => {
         <input type="text" placeholder="Search by keywords" />
         <div id="searchIconxyz">
           <BsSearch />
+    const [shipping, setShipping] = useState(false);
+    const handleShippingPop = (data) => {
+        setShipping(data)
+    }
+    const dispatch = useDispatch()
+const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
+    const [signin, setSignin] = useState(false);
+    const handleSigninPop = (data) => {
+        setSignin(data)
+    }
+    const [cart, setCart] = useState(false);
+    const handleCartPop = (data) => {
+        setCart(data)
+    }
+    const cartCounterval = useSelector((el)=> el.AppReducer.cart.length)
+   const handleLogout = ()=>{
+dispatch((logOut))
+   }
+    return (
+        <div id="navbarDiv">
+            <Link to={"/"}><div id="logoDiv"><img src={Logo} alt="" /></div></Link>
+            
+            <div id="search_Div">
+                <div id="search_Div_sub">All Categories <IoMdArrowDropdown/></div>
+                <input type="text" placeholder="Search by keywords" />
+                <div id="searchIcon"><BsSearch/></div>
+            </div>
+            
+            <div id="accountDiv">
+                <div id="shippingMainDiv" onMouseEnter={() => { handleShippingPop(true) }} onMouseLeave={() => { handleShippingPop(false) }}>
+                    <div>Ship to</div>
+                    <div id="shippingDiv">
+                        <div id="indianFlag"><img src={ indianFlagpng} h="20px" w="25px" mr="5px" alt="" /></div>
+                        <div id="currencyDiv">/INR<IoMdArrowDropdown /></div>
+                        {shipping?<ShippingPop></ShippingPop>:null}
+                    </div>
+                </div>
+
+           { !isAuth ?
+                 <div id="signInDiv" onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
+                 <AiOutlineUser/>
+                 <p>sign in</p>
+                 {signin ? <SignInPop></SignInPop> : null}
+             </div>
+             : <div id="signInDiv" onClick={handleLogout} onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
+             <AiOutlineUser/>
+             <p>Log out</p>
+             {signin ? <SignInPop></SignInPop> : null}
+         </div>
+           }
+
+                <Link to={"/cart"}>
+                <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">{ cartCounterval}</div>
+                    {cart ? <CartPop></CartPop> : null}
+                </div></Link>
+            </div>
+            
         </div>
       </div>
 
@@ -77,6 +138,7 @@ const Navbar = () => {
           </div>
         </div>
 
+
         <div
           id="signInDivxyz"
           onMouseEnter={() => {
@@ -89,6 +151,20 @@ const Navbar = () => {
           <AiOutlineUser />
           <p>sign in</p>
           {signin ? <SignInPop></SignInPop> : null}
+const SignInPop = () => {
+    return (
+        <div id="signInPop">
+            <div id="signPointer"></div>
+            <div id="welcomeGreet">Welcome to Geekbuying</div>
+            <div id="buttonDivSignInPop">
+            
+              <Link to="/signup">  <button id="joinBtn">Join</button></Link> 
+               <Link to="/login"> <button id="signInBtn">Sign In</button></Link>
+            
+            </div>
+            <div id="topDiv"></div>
+            <div id="orDiv">or</div>
+            <div id="googleAuthDiv"><FcGoogle/></div>
         </div>
 
         <div

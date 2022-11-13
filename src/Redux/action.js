@@ -13,3 +13,15 @@ export const deleteData = (parms) => (dispatch) => {
 export const editData = (params) => (dispatch) =>{
   return dispatch({type: types.EDIT_PRODUCTS_LS, payload: params})
 }
+export const detailPage = (params)=>(dispatch)=>{
+  return dispatch({type: types.DETAIL_PAGE, payload: params})
+}
+export const addToCart = (params)=>(dispatch)=>{
+  return dispatch({type: types.ADD_TO_CART, payload: params})
+}
+export const deleteFromCart = (params)=>(dispatch)=>{
+  return dispatch({type: types.DEL_TO_CART, payload: params});
+}
+export const shoppingDone = (dispatch)=>{
+  return dispatch({type: types.SHOPPING_DONE})
+}
