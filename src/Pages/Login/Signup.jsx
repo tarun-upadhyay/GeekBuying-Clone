@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { signUpRequest } from "../../Redux/Auth/action";
 import Login from "./Login";
 import "./Signup.css";
@@ -25,6 +25,8 @@ const handleSubmit = (e)=>{
     e.preventDefault()
   
     dispatch(signUpRequest(data))
+
+    
   
 }
   return (
