@@ -27,6 +27,7 @@ const Detail = () => {
   const handleRemove = () => {
     setCount(count - 1);
   };
+
   const handleAddToCart = (el) => {
     const data ={
     
@@ -44,8 +45,12 @@ const Detail = () => {
     { width: 768, itemsToShow: 3 },
     { width: 1200, itemsToShow: 4 },
   ];
-  const detailArr = useSelector((store) => store.AppReducer.details);
   
+  
+
+  const detailArr = useSelector((store)=>store.AppReducer.details)
+  console.log(detailArr)
+ 
 
   return (
     <div>
