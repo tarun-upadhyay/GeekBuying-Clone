@@ -27,6 +27,8 @@ if(val == "htl"){
 
 }
 
+
+
   
   return (
     <Box bg="#f2f2f2" w="100%">
