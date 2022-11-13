@@ -172,9 +172,9 @@ const Detail = () => {
           </div>
         </div>
       </div>
-      <div className={styles.feed}>
-        <div className="App">
-          <header className="nav">
+      <div className={styles.feeding}>
+        <div className="Appp">
+          <header className="navP">
             <nav className="nav__container__actions">
               <ul>
                 <li>
