@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import { getLocalData, saveData } from "../../Utils/localStorageData";
 import * as types from "./actionType";
 const initialState = {
@@ -50,9 +51,12 @@ function checkEmails(email, cred) {
   else return true;
 }
 function checkSingin(cred, payload) {
+    // if(payload.email ==="admin@admin.com" && payload.password ==="admin"){
+    //     return <Navigate to="/admin"/>
+    // }
   let checked = cred.filter((el) => el.email === payload.email);
   let pass = cred.filter((el) => el.password === payload.password);
-
+console.log(checked, pass)
   if (checked.length > 0 && pass.length > 0) {
     return true
   } else {
