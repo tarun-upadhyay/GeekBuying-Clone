@@ -24,10 +24,7 @@ if(val == "htl"){
 }else{
   setNewData([...newData.sort((b,a)=> a.price - b.price)])
 }
-
 }
-
-
 
   
   return (
@@ -118,16 +115,20 @@ if(val == "htl"){
           <Grid templateColumns={{base:'repeat(2, 1fr)', md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)" }} gap={6} m="15px">
             {
         newData.map((el)=>{
-               return <Link to="/cart">
-               <GridItem key={el.id} bg="white" p="5px">
+               return  <GridItem key={el.id} bg="white" p="5px" onClick={()=>detailPage(el)}>
                   <Image src={el.img}></Image>
                   <Text lineHeight="22px">{el.title}</Text>
                   <Text mt="2px" fontSize="20px" fontWeight="bold">₹ {el.price}</Text>
                   <Box display="flex" mt="5"><BsHeart/><Text ml="5px" mt="-1">{el.rating}</Text></Box>
                 </GridItem>
+
                </Link>
 
 })
+
+              
+              })
+
             }
           </Grid>
       </Box>
