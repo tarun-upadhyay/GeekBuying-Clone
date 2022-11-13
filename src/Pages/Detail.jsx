@@ -28,7 +28,9 @@ const Detail = () => {
     setCount(count - 1);
   };
   const handleAddToCart = (el) => {
+    const data ={
     
+    }
     dispatch(addToCart(el))
 
   };
@@ -43,7 +45,7 @@ const Detail = () => {
     { width: 1200, itemsToShow: 4 },
   ];
   const detailArr = useSelector((store) => store.AppReducer.details);
-  console.log(detailArr);
+  
 
   return (
     <div>
