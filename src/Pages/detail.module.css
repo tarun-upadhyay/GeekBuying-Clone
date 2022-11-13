@@ -25,6 +25,10 @@
     border: 1px rgb(167, 122, 37);
     margin: auto;
 }
+#title{
+    font-weight: bold;
+    font-size: 25px;
+}
 .aboutPro{
     display: flex;
     align-items: flex-start;
@@ -32,7 +36,13 @@
     width: 55%;
     height: 10%;
     gap: 15px;
+    margin-top: 15px;
+    margin-left: -35px;
 
+}
+.aboutPro>p{
+    font-size: 16px;
+    font-weight: bold;
 }
 .price{
     display: flex;
@@ -42,6 +52,10 @@
     height: 10%;
     gap: 10px;
 }
+.price>p{
+    font-size: 16px;
+    font-weight: bold;
+}
 .coupon{
     display: flex;
     align-items: flex-start;
@@ -49,6 +63,9 @@
     width: 40%;
     height: 10%;
     gap: 10px;
+}
+.coupon>p{
+    font-weight: bold;
 }
 .count{
     display: flex;
@@ -59,12 +76,16 @@
     gap: 10px;
      
 }
+.count>p{
+    font-weight: bold;
+}
 .buttonSec{
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     width: 35%;
     height: 10%;
+    margin-top: 15px;
 }
 .buttonSec>button{
     padding: 15px 15px 15px 15px;
@@ -81,9 +102,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-    width: 73%;
+    width: 83%;
     height: 10%;
     gap: 10px;
+    margin-top: 35px;
 }
 .ima{
     display: flex;
@@ -92,17 +114,22 @@
     width: 38%;
     height: 10%;
     gap: 10px;
+    
 }
 .pay>p>img{
 height: 30px;
 width: 70px;
 position: absolute;
-margin-left: 10px;
+margin-top: -20px;
+margin-left: 100px;
 }
-.ima>img{
-    height: 30px;
-    width: 50px;
+.pay>p{
+    margin-top: 14px;
+    font-weight: bold;
 }
+ .pa>p{
+    font-weight: bold;
+ }
 
 .media{
     display: flex;
@@ -118,13 +145,17 @@ margin-left: 10px;
     cursor: pointer;
 }
 #sugg{
-    border: 1px solid red;
+    
     height: 15rem;
     width: 80%;
     margin: auto;
+    box-shadow: cornsilk;
 }
 #you{
-    margin-left: 8em;
+    margin-left: 10em;
+    font-size: 16px;
+    margin-top: -2em;
+    font-weight: bold;
 }
 #slide{
     height: 7em;
@@ -165,10 +196,31 @@ margin-left: 10px;
 .imgdesc{
     height: 15em;
     width: 100%;
-    margin-top: -5em;
+    margin-top: -8em;
 }
 .imgdesc>img{
     height: 15em;
     margin: auto;
     width: 98%;
+}
+.review{
+    height:100vh;
+    width: 120vh;
+    margin: auto;
+    margin-left: 25vh;
+    margin-top: 90vh;
+    position: absolute;
+}
+.ques>h1{
+    font-size: 26px;
+    font-weight: bold;
+    
+}
+.ques>h1+p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.ques{
+    margin-top: -50vh;
+     margin-left: 60vh;
 }

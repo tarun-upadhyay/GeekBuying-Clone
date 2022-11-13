@@ -1,16 +1,18 @@
  
 import React, { useState } from "react";
 import styles from "./detail.module.css";
-import { Link } from "react-scroll";
+ import {useNavigate} from "react-router-dom"
 import Description from "../Pages/Description";
 import Review from "../Pages/Review";
 import Qa from "../Pages/QA";
 import "./scroll.css"
+ import {Link} from "react-scroll"
+ import Carousel from "react-elastic-carousel";
  
-import React from 'react'
 import { useSelector } from 'react-redux'
 
 const Detail = () => {
+  const Navigate = useNavigate()
   const [count, setCount] = useState(1);
   const handleAdd = () => {
     setCount(count + 1);
@@ -18,17 +20,33 @@ const Detail = () => {
   const handleRemove = () => {
     setCount(count - 1);
   };
+  const addtocart = ()=>{
+    Navigate("./Cart.jsx")
+  }
+  const buynow = ()=>{
+    Navigate("./Cart.jsx")
+  }
  
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2 },
+  { width: 768, itemsToShow: 3 },
+  { width: 1200, itemsToShow: 4 },
+];
+  const detailArr = useSelector((store)=>store.details)
+  console.log(detailArr)
  
   return (
     <div>
       <div id={styles.main}>
         <div id={styles.image}>
           <img
-            src="https://img.gkbcdn.com/p/2022-05-27/WEESTA-7-in-1-Air-Fryer-Toaster-Oven-Combo-Gray-501361-0._w280_.jpg"
-            alt="mm"
+            src={detailArr.img}
+            alt={detailArr.title}
           />
-          <div id={styles.slide}></div>
+          <div id={styles.slide}>
+
+          </div>
           <div className={styles.media}>
             <p>Share To : </p>
             <img
@@ -50,21 +68,19 @@ const Detail = () => {
           </div>
         </div>
         <div id={styles.detail}>
-          <h2>Electic</h2>
+          <h1 id={styles.title}>{detailArr.title}</h1>
           <div className={styles.aboutPro}>
-            <p>Reviews</p>
-            <p>Brand</p>
-            <p> Answered Questions</p>
-            <p>Item Code</p>
+           
+            <p>Item Code : {detailArr.rating}</p>
           </div>
           <div className={styles.price}>
-            <p>₹ 15,0000/-</p>
-            <p>₹ 5000</p>
+            <p>₹ {detailArr.price}</p>
+           
             <p>15% OFF</p>
           </div>
           <div className={styles.coupon}>
             <p>NEW USER 2% OFF</p>
-            <p>GET COUPON</p>
+            
           </div>
 
           <div>
@@ -82,8 +98,8 @@ const Detail = () => {
             <h3>Shipping : Cannot Ship to india</h3>
           </div>
           <div className={styles.buttonSec}>
-            <button>ADD TO CART</button>
-            <button>BUY NOW</button>
+            <button onClick={addtocart}>ADD TO CART</button>
+            <button onClick={buynow}>BUY NOW</button>
           </div>
           <div className={styles.pay}>
             <p>
@@ -100,25 +116,26 @@ const Detail = () => {
             <p>DROPSHIPPING DOWNLOAD</p>
             <p>BULK ORDER REBATE</p>
           </div>
-          <div className={styles.ima}>
-            <img
-              src="https://play-lh.googleusercontent.com/L2t8EnZ0MfANNcvWkEew69d25JIufAf7IvnturnDnjCwbYGYLc1yc14DEur7wQgaFYE=w600-h300-pc0xffffff-pd"
-              alt="ss"
-            />
-            <img
-              src="https://play-lh.googleusercontent.com/L2t8EnZ0MfANNcvWkEew69d25JIufAf7IvnturnDnjCwbYGYLc1yc14DEur7wQgaFYE=w600-h300-pc0xffffff-pd"
-              alt="sss"
-            />
-            <img
-              src="https://play-lh.googleusercontent.com/L2t8EnZ0MfANNcvWkEew69d25JIufAf7IvnturnDnjCwbYGYLc1yc14DEur7wQgaFYE=w600-h300-pc0xffffff-pd"
-              alt="ssss"
-            />
-          </div>
+         
         </div>
       </div>
       <div>
         <h3 id={styles.you}>You May also Like</h3>
-        <div id={styles.sugg}></div>
+        <div id={styles.sugg}>
+        
+      <div className="App">
+        <Carousel breakPoints={breakPoints}>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+          <img src='https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg'  alt='ss'/>
+        </Carousel>
+      </div>
+        </div>
       </div>
       <div className={styles.feed}>
         <div className="App">
