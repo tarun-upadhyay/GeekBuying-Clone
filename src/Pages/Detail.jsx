@@ -57,7 +57,7 @@ const Detail = () => {
       <div id={styles.main}>
         <div id={styles.image}>
           <img src={detailArr.img} alt={detailArr.title} />
-          <div id={styles.slide}></div>
+         
           <div className={styles.media}>
             <p>Share To : </p>
             <img
@@ -108,9 +108,9 @@ const Detail = () => {
           </div>
           <div className={styles.buttonSec}>
            
-             <Link1 to="/cart">
-             <button onClick={()=>handleAddToCart(detailArr)}>ADD TO CART</button>
-             </Link1>
+             
+             <button  id={styles.btn} onClick={()=>handleAddToCart(detailArr)}><Link1 to="/cart">ADD TO CART</Link1></button>
+           
            
             <button onClick={buynow}>BUY NOW</button>
           </div>
@@ -141,31 +141,31 @@ const Detail = () => {
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2022-10-15/Creativity-CR6-SE-Nozzle-Thermistor-Heating-Rod-Kit-517911-0._w280_.jpg"
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2021-11-19/Anycubic-PLA-3D-Printer-Filament-1kg-White-478938-0._w280_.jpg"
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2022-04-16/Trianglelab-RNC-Nano-Coated-Gear-DDB-Extruder-V2-1-499716-0._w280_.jpg"
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2022-04-08/BIGTREETECH-SKR-MINI-E3-V3-0-32-Bit-Control-Board-for-Ender-3-Ender-3-499308-0._w280_.jpg"
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2022-10-19/Trianglelab-E3D-V6-0-8mm-Hardened-Steel-Nozzles-517983-0._w280_.jpg"
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2022-09-09/Trianglelab-TCHC-TD6-Model-B-12V-Hot-End-516954-0._w280_.jpg"
                 alt="ss"
               />
               <img
-                src="https://img.gkbcdn.com/p/2022-10-18/Trianglelab-M6-ZS-0-6mm-Nozzle-for-V6-Hotend-3D-Printer-517935-0._w280_.jpg"
+                src="https://img.gkbcdn.com/p/2022-02-17/ERYONE-Silk-PLA-Filament-for-3D-Printer-1-75mm-496636-0._w280_.jpg"
                 alt="ss"
               />
             </Carousel>

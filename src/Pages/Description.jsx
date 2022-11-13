@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import styles from "./detail.module.css"
 const Description = () => {
+  const detailArr = useSelector((store)=>store.AppReducer.details)
   return (
     <div>
         <div id={styles.desc}>
@@ -19,7 +21,7 @@ const Description = () => {
         <p>Support power supply, transmission, video signal transmission</p>
         </div>
         <div className={styles.imgdesc}>
-            <img src="https://img.gkbcdn.com/s3/d/202209/AOSIMAN-ASM-156FCC-15-6-Inch-Portable-Monitor-Black-516666-0.jpg" alt="n" />
+            <img src={detailArr.img} alt="n" />
         </div>
     </div>
   )
