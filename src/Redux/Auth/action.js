@@ -6,3 +6,7 @@ export const loginRequest = (params) => (dispatch) => {
 export const signUpRequest = (params) => (dispatch) => {
   return dispatch({ type: types.SIGNUP_REQUEST, payload: params });
 };
+
+export const adminLoginRequest = (params)=>(dispatch)=>{
+  return dispatch({type: types.ADMIN_LOGIN, payload: params})
+}

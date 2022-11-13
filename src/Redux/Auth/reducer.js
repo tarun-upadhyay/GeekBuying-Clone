@@ -4,6 +4,7 @@ import * as types from "./actionType";
 const initialState = {
   cred: getLocalData("login_detail") || [],
   isAuth: getLocalData("isLogged") || false,
+  isAdmin: getLocalData("isAdminLogged") || false,
 };
 export const reducer = (oldState = initialState, action) => {
   const { type, payload } = action;
@@ -40,6 +41,18 @@ export const reducer = (oldState = initialState, action) => {
           ...oldState,
         };
       }
+      case types.ADMIN_LOGIN:
+        let data = [...oldState.cred];
+        data.push(payload);
+        saveData("login_detail", data);
+        saveData("isLogged",true)
+        saveData("isAdminLogged",true)
+        return{
+          ...oldState,
+          cred: data,
+          isAdmin: true,
+          isAuth: true
+        }
 
     default:
       return oldState;
@@ -51,9 +64,7 @@ function checkEmails(email, cred) {
   else return true;
 }
 function checkSingin(cred, payload) {
-    // if(payload.email ==="admin@admin.com" && payload.password ==="admin"){
-    //     return <Navigate to="/admin"/>
-    // }
+   
   let checked = cred.filter((el) => el.email === payload.email);
   let pass = cred.filter((el) => el.password === payload.password);
 console.log(checked, pass)

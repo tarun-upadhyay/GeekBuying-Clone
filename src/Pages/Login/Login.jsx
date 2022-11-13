@@ -1,21 +1,31 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import "./Signup.css";
 import { useDispatch, useSelector } from "react-redux";
-import { loginRequest } from "../../Redux/Auth/action";
+import { adminLoginRequest, loginRequest } from "../../Redux/Auth/action";
 const Login = () => {
+  const navigate = useNavigate()
   const [emaillogIn, setEmaillogIn] = useState("");
   const [passwordlogIn, setPasswordlogIn] = useState("");
-const dispatch = useDispatch()
-const store = useSelector((store)=> store.AuthReducer)
+  const dispatch = useDispatch();
+  const store = useSelector((store) => store.AuthReducer);
   function handleLogin(e) {
     e.preventDefault();
-    let data = {email: emaillogIn, password: passwordlogIn}
-   console.log(dispatch(loginRequest(data)))
-}
-console.log(store)
+    let data = { email: emaillogIn, password: passwordlogIn };
+    if (emaillogIn === "admin@admin.com" && passwordlogIn === "admin") {
+      dispatch(adminLoginRequest(data));
+     
+    } else {
+      dispatch(loginRequest(data));
+      navigate("/cart")
+    }
+  }
 
+ 
+if(store.isAdmin){
+  navigate("/admin")
+}
   return (
     <div>
       <form onSubmit={handleLogin}>
