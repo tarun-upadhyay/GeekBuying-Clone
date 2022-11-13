@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { signUpRequest } from "../../Redux/Auth/action";
 import Login from "./Login";
 import "./Signup.css";
 
@@ -11,6 +13,7 @@ const initState = {
     mobile: "",
 }
 const Register = () => {
+  const dispatch = useDispatch()
     const [ data, setData   ] = useState(initState);
     const { name, email, password, mobile } = data
 const handleChange = (e)=>{
@@ -20,7 +23,9 @@ const handleChange = (e)=>{
 
 const handleSubmit = (e)=>{
     e.preventDefault()
-    console.log(data)
+  
+    dispatch(signUpRequest(data))
+  
 }
   return (
     <div className="box">

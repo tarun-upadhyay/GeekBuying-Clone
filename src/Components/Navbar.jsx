@@ -11,6 +11,7 @@ import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Logo from "../logo.png";
 import { navData } from "./data";
+import { useSelector } from "react-redux";
 const indianFlagpng= "https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png";
 export const Nav = () => {
     return (
@@ -27,7 +28,7 @@ const Navbar = () => {
     const handleShippingPop = (data) => {
         setShipping(data)
     }
-
+const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
     const [signin, setSignin] = useState(false);
     const handleSigninPop = (data) => {
         setSignin(data)
@@ -56,11 +57,13 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div id="signInDiv" onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
-                    <AiOutlineUser/>
-                    <p>sign in</p>
-                    {signin ? <SignInPop></SignInPop> : null}
-                </div>
+           { !isAuth &&
+                 <div id="signInDiv" onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
+                 <AiOutlineUser/>
+                 <p>sign in</p>
+                 {signin ? <SignInPop></SignInPop> : null}
+             </div>
+           }
 
                 <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">0</div>
                     {cart ? <CartPop></CartPop> : null}
@@ -95,10 +98,10 @@ const SignInPop = () => {
             <div id="signPointer"></div>
             <div id="welcomeGreet">Welcome to Geekbuying</div>
             <div id="buttonDivSignInPop">
-            <Link to='/login'>
-                <button id="joinBtn">Join</button>
-                <button id="signInBtn">Sign In</button>
-            </Link>
+            
+              <Link to="/signup">  <button id="joinBtn">Join</button></Link> 
+               <Link to="/login"> <button id="signInBtn">Sign In</button></Link>
+            
             </div>
             <div id="topDiv"></div>
             <div id="orDiv">or</div>

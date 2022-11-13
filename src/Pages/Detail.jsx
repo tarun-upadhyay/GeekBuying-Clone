@@ -1,23 +1,14 @@
  
 import React, { useState } from "react";
 import styles from "./detail.module.css";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import Description from "../Pages/Description";
 import Review from "../Pages/Review";
 import Qa from "../Pages/QA";
 import "./scroll.css"
- 
-import React from 'react'
+
 import { useSelector } from 'react-redux'
-<<<<<<< HEAD
-const Detail = () => {
-  
-  return (
-    <div>Detail</div>
-  )
-}
-=======
->>>>>>> a6e2bbd3edb9ec41d8db979a77e5570b37c4212e
+
 
 const Detail = () => {
   const [count, setCount] = useState(1);
@@ -135,19 +126,19 @@ const Detail = () => {
             <nav className="nav__container__actions">
               <ul>
                 <li>
-                  <Link activeClass="active" smooth spy to="description">
+                  {/* <Link activeClass="active" smooth spy to="description">
                     DESCRIPTION
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
-                  <Link activeClass="active" smooth spy to="Review">
+                  {/* <Link activeClass="active" smooth spy to="Review">
                     REVIEW
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
-                  <Link activeClass="active" smooth spy to="Qa">
+                  {/* <Link activeClass="active" smooth spy to="Qa">
                     Q&A
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </nav>
