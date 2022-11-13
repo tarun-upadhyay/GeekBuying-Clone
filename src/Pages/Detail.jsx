@@ -42,7 +42,7 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
 ];
-  const detailArr = useSelector((store)=>store.details)
+  const detailArr = useSelector((store)=>store.AppReducer.details)
   console.log(detailArr)
  
   return (
@@ -152,19 +152,19 @@ const breakPoints = [
             <nav className="nav__container__actions">
               <ul>
                 <li>
-                  {/* <Link activeClass="active" smooth spy to="description">
+                  <Link activeClass="active" smooth spy to="description">
                     DESCRIPTION
-                  </Link> */}
+                  </Link>
                 </li>
                 <li>
-                  {/* <Link activeClass="active" smooth spy to="Review">
+                  <Link activeClass="active" smooth spy to="Review">
                     REVIEW
-                  </Link> */}
+                  </Link>
                 </li>
                 <li>
-                  {/* <Link activeClass="active" smooth spy to="Qa">
+                  <Link activeClass="active" smooth spy to="Qa">
                     Q&A
-                  </Link> */}
+                  </Link>
                 </li>
               </ul>
             </nav>
