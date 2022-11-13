@@ -16,16 +16,16 @@ export const NewFor = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
   };
-  //   useEffect(() => {}, [state]);
+
   return (
-    <Stack bgColor={"blue.50"} border={"1px"} m={"auto"}>
+    <Stack bgColor={"blue.50"} border={"1px"} width={"90%"} m={"auto"} mt={10}>
       <Box p={9}>
         <Box>
           <Heading fontSize={{ base: "0.7rem", md: "1.2rem", lg: "1.7rem" }} mb={5}>
             New For You
           </Heading>
         </Box>
-        <HStack maxW={"95vw"}>
+        <HStack maxW={"90vw"}>
           <Image src={"https://img.gkbcdn.com/bn/2211/5-636a188c2b40c958a00d243d._p1_.jpg"} />
           <HStack maxW={"100%"}>
             <Slider {...settings} style={{ width: "70vw" }}>

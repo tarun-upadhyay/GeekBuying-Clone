@@ -2,7 +2,7 @@ import { Box, Flex, Grid, GridItem, Heading, HStack, Image, Stack, Text } from "
 
 export const Enjoylife = () => {
   return (
-    <Stack border={"1px"} width={"90%"} m={"auto"}>
+    <Stack border={"1px"} width={"90%"} m={"auto"} mt={"10"}>
       <Box p={9}>
         <Box>
           <Heading fontSize={{ base: "0.7rem", md: "1.2rem", lg: "1.7rem" }} mb={5}>

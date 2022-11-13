@@ -5,7 +5,6 @@ import { SellerCard } from "./SellerCard";
 
 export const BestSeller = () => {
   const data = Bestsell;
-  console.log(data.length);
   var settings = {
     dots: false,
     infinite: true,
@@ -14,14 +13,11 @@ export const BestSeller = () => {
     slidesToScroll: 1,
   };
   return (
-    <Stack maxW={"88vw"} justifyContent={"center"} p={"2"} margin={"auto"}>
+    <Stack maxW={"90vw"} justifyContent={"center"} p={"2"} margin={"auto"} mt={"10"}>
       <Heading fontSize={{ base: "0.7rem", md: "1.2rem", lg: "1.7rem" }}>Best Sellers</Heading>
-      <HStack bgColor={"blue.400"} p={8} color={"white"}>
+      <HStack bgColor={"white.400"} p={8} color={"black"} m={"auto"} justifyContent={"center"}>
         <Slider {...settings} style={{ width: "80vw" }}>
           {data.map((item, i) => {
-            {
-              console.log(item);
-            }
             return <SellerCard key={i + 1} item={item} />;
           })}
         </Slider>

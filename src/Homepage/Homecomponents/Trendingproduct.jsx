@@ -6,10 +6,10 @@ const Trendingproduct = () => {
   const data = TrendingProduct;
   return (
     <Box width={{ base: "40%", md: "50%", lg: "90%" }} flexDirection={"column"} margin={"auto"} my={10}>
-      <Heading fontSize={{ base: "0.7rem", md: "0.9rem", lg: "1.2rem" }} mb={"3"}>
+      <Heading fontSize={{ base: "0.9em", md: "0.9em", lg: "1.5em" }} mb={"3"}>
         Trending Categories
       </Heading>
-      <Stack flexDirection={["column", "row"]} width={"100%"} gap={"3%"} margin={"auto"}>
+      <Stack flexDirection={["column", "row"]} justifyContent={"left"} width={"100%"} gap={"5%"} margin={"auto"}>
         {data.map((item, i) => {
           return <TrendCard key={i + 1} item={item} />;
         })}
