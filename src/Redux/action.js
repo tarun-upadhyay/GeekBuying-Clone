@@ -16,3 +16,6 @@ export const editData = (params) => (dispatch) =>{
 export const detailPage = (params)=>(dispatch)=>{
   return dispatch({type: types.DETAIL_PAGE, payload: params})
 }
+export const addToCart = (params)=>(dispatch)=>{
+  return dispatch({type: types.ADD_TO_CART, payload: params})
+}

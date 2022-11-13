@@ -3,6 +3,7 @@ import * as types from "./actionType";
 const initialState = {
   products: getLocalData("products_data") || [],
   details: [],
+  cart: [],
 };
 
 export const reducer = (oldState = initialState, action) => {
@@ -52,6 +53,14 @@ export const reducer = (oldState = initialState, action) => {
         ...oldState,
         details: payload,
       };
+      case types.ADD_TO_CART:
+      console.log(payload)  
+      let cartStore = [payload]
+      saveData("cart", cartStore)
+      return{
+          ...oldState,
+cart: cartStore
+        }
 
     default:
       return oldState;
