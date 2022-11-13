@@ -1,15 +1,24 @@
  
 import React, { useState } from "react";
 import styles from "./detail.module.css";
+ 
  import {useNavigate} from "react-router-dom"
+ 
+// import { Link } from "react-scroll";
+ 
 import Description from "../Pages/Description";
 import Review from "../Pages/Review";
 import Qa from "../Pages/QA";
 import "./scroll.css"
+ 
  import {Link} from "react-scroll"
  import Carousel from "react-elastic-carousel";
  
+ 
+
+ 
 import { useSelector } from 'react-redux'
+
 
 const Detail = () => {
   const Navigate = useNavigate()
@@ -143,19 +152,19 @@ const breakPoints = [
             <nav className="nav__container__actions">
               <ul>
                 <li>
-                  <Link activeClass="active" smooth spy to="description">
+                  {/* <Link activeClass="active" smooth spy to="description">
                     DESCRIPTION
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
-                  <Link activeClass="active" smooth spy to="Review">
+                  {/* <Link activeClass="active" smooth spy to="Review">
                     REVIEW
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
-                  <Link activeClass="active" smooth spy to="Qa">
+                  {/* <Link activeClass="active" smooth spy to="Qa">
                     Q&A
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </nav>

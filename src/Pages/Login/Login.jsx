@@ -1,59 +1,55 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom';
-import {Alert} from "react-bootstrap";
-import './Signup.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Alert } from "react-bootstrap";
+import "./Signup.css";
+import { useDispatch, useSelector } from "react-redux";
+import { loginRequest } from "../../Redux/Auth/action";
 const Login = () => {
-const [emaillogIn,setEmaillogIn]=useState("");
-const [passwordlogIn,setPasswordlogIn]=useState("");
-const [flag,setFlag]=useState(false);
-const [Homepage,setHomePage]=useState(true);
-function handleLogin(e){
+  const [emaillogIn, setEmaillogIn] = useState("");
+  const [passwordlogIn, setPasswordlogIn] = useState("");
+const dispatch = useDispatch()
+const store = useSelector((store)=> store.AuthReducer)
+  function handleLogin(e) {
     e.preventDefault();
-    let email=localStorage.getItem("Email").replace(/"/g,"");
-    let password=localStorage.getItem("Password").replace(/"/g,"");
-
-    if(!emaillogIn || !passwordlogIn){
-        setFlag(true);
-        console.log("Empty");
-    }
-    else if(passwordlogIn !==password ||emaillogIn!==email){
-        setFlag(true)
-    }
-    else{
-        setHomePage(!Homepage);
-        setFlag(false)
-    }
+    let data = {email: emaillogIn, password: passwordlogIn}
+   console.log(dispatch(loginRequest(data)))
 }
+console.log(store)
 
-return (
+  return (
     <div>
-       
-        <form onSubmit={handleLogin}>
-            <h3>Sign In</h3>
-<div className='formInputgroup'>  
+      <form onSubmit={handleLogin}>
+        <h3>Sign In</h3>
+        <div className="formInputgroup">
+          <input
+            type="text"
+            className="formInput"
+            placeholder="Email address"
+            onChange={(event) => setEmaillogIn(event.target.value)}
+          />
+        </div>
+        <div className="formInputgroup">
+          <input
+            type="password"
+            className="formInput"
+            placeholder="Password"
+            onChange={(event) => setPasswordlogIn(event.target.value)}
+          />
+          <br />
+        </div>
 
-                <input type='text' className='formInput'
-                 placeholder='Email address'
-                 onChange={(event)=> setEmaillogIn(event.target.value)} />
-                
-            </div>
-            <div className='formInputgroup'>
-            
-                <input type='password' className='formInput'
-                 placeholder=' Password'
-                 onChange={(event)=> setPasswordlogIn(event.target.value)} /><br/>
-     
-            </div>
-            <Link to="/Cart"><button type="submit" className='s'>Login</button></Link>
-            {/* {flag && (
+        <button type="submit" className="s">
+          Login
+        </button>
+
+        {/* {flag && (
             //    <Alert color ="primary" variant='danger'>
             //       Please Fill Correct Info 
             //    </Alert> 
             )} */}
-
-            </form>
+      </form>
     </div>
-  )
-}
+  );
+};
 
 export default Login;
