@@ -3,7 +3,7 @@ import * as types from "./actionType";
 const initialState = {
   products: getLocalData("products_data") || [],
   details: [],
-  cart: [],
+  cart: getLocalData("cart") || [],
 };
 
 export const reducer = (oldState = initialState, action) => {
@@ -53,13 +53,27 @@ export const reducer = (oldState = initialState, action) => {
         ...oldState,
         details: payload,
       };
-      case types.ADD_TO_CART:
-      console.log(payload)  
-      let cartStore = [payload]
-      saveData("cart", cartStore)
-      return{
+    case types.ADD_TO_CART:
+      let cartStore = [...oldState.cart];
+      let check = cartStore.filter((el) => el.title === payload.title);
+      console.log(check);
+      if (check.length > 0) {
+        alert("already present inside the cart")
+        return oldState;
+      } else {
+        cartStore.push(payload);
+        saveData("cart", cartStore);
+        return {
           ...oldState,
-cart: cartStore
+          cart: cartStore,
+        };
+      }
+      case types.DEL_TO_CART:
+        let aferdel = [...oldState.cart.filter((el)=> el.title !== payload.title)];
+        saveData("cart", aferdel)
+        return{
+          ...oldState,
+          cart: aferdel,
         }
 
     default:

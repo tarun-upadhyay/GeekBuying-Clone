@@ -29,14 +29,21 @@ const Detail = () => {
   };
 
   const handleAddToCart = (el) => {
-    const data ={
-    
+    const { title, img, category, price, rating } = el;
+    let newdata = {
+      title: title,
+      img: img,
+      category: category,
+      price: price,
+      rating: rating,
+      count: count,
     }
-    dispatch(addToCart(el))
+    dispatch(addToCart(newdata))
+    alert("Added inside the cart")
 
   };
   const buynow = () => {
-    navigate("./cart");
+    navigate("/cart");
   };
 
   const breakPoints = [
@@ -49,7 +56,7 @@ const Detail = () => {
   
 
   const detailArr = useSelector((store)=>store.AppReducer.details)
-  console.log(detailArr)
+
  
 
   return (
@@ -97,7 +104,7 @@ const Detail = () => {
           </div>
           <div className={styles.count}>
             <p>QTY : </p>
-            <button onClick={handleAdd}>+</button>
+            <button onClick={handleAdd} disabled={count ===5}>+</button>
             <p>{count}</p>
             <button disabled={count === 1} onClick={handleRemove}>
               -
@@ -109,7 +116,7 @@ const Detail = () => {
           <div className={styles.buttonSec}>
            
              
-             <button  id={styles.btn} onClick={()=>handleAddToCart(detailArr)}><Link1 to="/cart">ADD TO CART</Link1></button>
+             <button  id={styles.btn} onClick={()=>handleAddToCart(detailArr)}>ADD TO CART</button>
            
            
             <button onClick={buynow}>BUY NOW</button>

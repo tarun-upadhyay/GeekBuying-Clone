@@ -37,6 +37,8 @@ const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
     const handleCartPop = (data) => {
         setCart(data)
     }
+    const cartCounterval = useSelector((el)=> el.AppReducer.cart.length)
+   
     return (
         <div id="navbarDiv">
             <Link to={"/"}><div id="logoDiv"><img src={Logo} alt="" /></div></Link>
@@ -65,7 +67,7 @@ const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
              </div>
            }
 
-                <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">0</div>
+                <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">{ cartCounterval}</div>
                     {cart ? <CartPop></CartPop> : null}
                 </div>
             </div>

@@ -18,7 +18,7 @@ const Login = () => {
      
     } else {
       dispatch(loginRequest(data));
-      navigate("/cart")
+      
     }
   }
 

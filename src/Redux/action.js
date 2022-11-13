@@ -19,3 +19,6 @@ export const detailPage = (params)=>(dispatch)=>{
 export const addToCart = (params)=>(dispatch)=>{
   return dispatch({type: types.ADD_TO_CART, payload: params})
 }
+export const deleteFromCart = (params)=>(dispatch)=>{
+  return dispatch({type: types.DEL_TO_CART, payload: params});
+}

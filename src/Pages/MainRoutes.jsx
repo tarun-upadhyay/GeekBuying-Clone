@@ -10,14 +10,14 @@ import Admin from "../Admin/Admin";
 import AddProduct from "../Admin/AddProduct";
 import Manage from "../Admin/Manage";
 import Login from "./Login/Login";
-import PrivatRoute from "../Components/PrivatRoute";
+import {PrivatRoute, SecondPrivate} from "../Components/PrivatRoute";
 const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Homepage />}></Route>
       <Route path="/product" element={<Product />}></Route>
       <Route path="/detail" element={<Detail />}></Route>
-      <Route path="/cart" element={<Cart />}></Route>
+      <Route path="/cart" element={<SecondPrivate><Cart /></SecondPrivate>}></Route>
       <Route path="/payment" element={<Payment />}></Route>
       <Route path="/signup"  element={<Register/>}/>
       <Route path="/login"  element={<Login/>}></Route>
