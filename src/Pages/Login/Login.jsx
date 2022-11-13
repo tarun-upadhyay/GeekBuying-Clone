@@ -15,6 +15,7 @@ const Login = () => {
     let data = { email: emaillogIn, password: passwordlogIn };
     if (emaillogIn === "admin@admin.com" && passwordlogIn === "admin") {
       dispatch(adminLoginRequest(data));
+ 
     } else {
       dispatch(loginRequest(data));
     }
@@ -23,6 +24,20 @@ const Login = () => {
   if (store.isAdmin) {
     navigate("/admin");
   }
+ 
+          
+  else {
+      dispatch(loginRequest(data));
+    }
+    
+    
+  
+
+ if(store.isAuth){
+  navigate("/cart")
+ }
+
+ 
   return (
     <div>
       
@@ -54,6 +69,6 @@ const Login = () => {
        
     </div>
   );
-};
+          };
 
 export default Login;

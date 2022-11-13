@@ -10,3 +10,6 @@ export const signUpRequest = (params) => (dispatch) => {
 export const adminLoginRequest = (params)=>(dispatch)=>{
   return dispatch({type: types.ADMIN_LOGIN, payload: params})
 }
+export const logOut = (dispatch)=>{
+  return dispatch({type: types.LOGOUT})
+}

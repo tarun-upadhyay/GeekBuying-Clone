@@ -11,7 +11,8 @@ import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Logo from "../logo.png";
 import { navData } from "./data";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from "../Redux/Auth/action";
 const indianFlagpng= "https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png";
 export const Nav = () => {
     return (
@@ -28,6 +29,7 @@ const Navbar = () => {
     const handleShippingPop = (data) => {
         setShipping(data)
     }
+    const dispatch = useDispatch()
 const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
     const [signin, setSignin] = useState(false);
     const handleSigninPop = (data) => {
@@ -38,7 +40,9 @@ const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
         setCart(data)
     }
     const cartCounterval = useSelector((el)=> el.AppReducer.cart.length)
-   
+   const handleLogout = ()=>{
+dispatch((logOut))
+   }
     return (
         <div id="navbarDiv">
             <Link to={"/"}><div id="logoDiv"><img src={Logo} alt="" /></div></Link>
@@ -59,17 +63,23 @@ const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
                     </div>
                 </div>
 
-           { !isAuth &&
+           { !isAuth ?
                  <div id="signInDiv" onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
                  <AiOutlineUser/>
                  <p>sign in</p>
                  {signin ? <SignInPop></SignInPop> : null}
              </div>
+             : <div id="signInDiv" onClick={handleLogout} onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
+             <AiOutlineUser/>
+             <p>Log out</p>
+             {signin ? <SignInPop></SignInPop> : null}
+         </div>
            }
 
+                <Link to={"/cart"}>
                 <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">{ cartCounterval}</div>
                     {cart ? <CartPop></CartPop> : null}
-                </div>
+                </div></Link>
             </div>
             
         </div>
