@@ -1,7 +1,7 @@
 import { Box, GridItem, Image, Stack, Text } from "@chakra-ui/react";
 
 export const NewForCard = ({ item }) => {
-  
+
   return (
     <Box backgroundColor={"white"} p={3} height={"100%"} width={"100%"}>
       <Image src={item.img} width={{ base: "30%", md: "50%", lg: "60%" }} />

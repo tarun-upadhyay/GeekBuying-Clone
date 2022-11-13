@@ -8,7 +8,7 @@ const BannerSlider = () => {
   const data = bannerData;
   return (
     <Carousel
-      width={"39vw"}
+      width={"47vw"}
       dynamicHeight={"100%"}
       showThumbs={false}
       autoPlay={true}
