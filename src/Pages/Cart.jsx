@@ -1,6 +1,7 @@
 import { Box, Button, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { deleteFromCart } from "../Redux/action";
 
 const Cart = () => {
@@ -12,7 +13,7 @@ const Cart = () => {
   let finalPrice = 0;
   data.forEach((el) => {
     finalPrice = el.price*el.count + finalPrice;
-finalPrice  = Number.parseFloat(finalPrice).toFixed(2);
+//finalPrice  ;
     return finalPrice;
   });
 
@@ -58,7 +59,7 @@ finalPrice  = Number.parseFloat(finalPrice).toFixed(2);
         <Text>
           Your Subtotal:{" "}
           <span style={{ fontSize: "22px", color: "red" }}>₹ {
-           finalPrice
+           Number.parseFloat(finalPrice).toFixed(2)
           }</span>
         </Text>
       </Box>
@@ -67,10 +68,12 @@ finalPrice  = Number.parseFloat(finalPrice).toFixed(2);
         <Text m="10px">
           Your Subtotal:{" "}
           <span style={{ fontSize: "22px", color: "red" }}>₹{
-           finalPrice
+            Number.parseFloat(finalPrice).toFixed(2)
           }</span>
         </Text>
-        <Button colorScheme="blue">Proceed to checkout</Button>
+        <Button colorScheme="blue">
+          <Link to={"/payment"}>Proceed to checkout</Link>
+        </Button>
       </HStack>
     </Box>
   );

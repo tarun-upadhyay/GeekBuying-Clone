@@ -1,10 +1,14 @@
 import { Center, Image } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
 
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { shoppingDone } from "../Redux/action";
 
 import styles from "./payment.module.css";
 export default function Payment() {
-  
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate()
   const handlePayment = () => {
     window.confirm("Are you Sure!!");
     setTimeout(() => {
@@ -12,7 +16,8 @@ export default function Payment() {
     }, 2000);
     setTimeout(() => {
       alert("THANKS FOR SHOPPING");
-      
+      dispatch(shoppingDone)
+      navigate("/")
     }, 4000);
     
   };
@@ -20,7 +25,7 @@ export default function Payment() {
   return (
     <>
       <Center>
-        <Image src="https://i.imgur.com/GSFnQtR.jpg"></Image>
+       
       </Center>
 
       <div className={styles.maina}>
@@ -89,19 +94,17 @@ export default function Payment() {
               <h3>PAYMENT</h3>
 
               <form>
-                Accepted Card <br />
-                <img
-                  id={styles.visa}
-                  src="https://i.im.ge/2022/07/23/F792dq.png"
-                  width="350"
-                />
+               <span> Accepted Card</span> <br />
+                
                 <br />
                 <br />
-                Credit card number
+                <span>Credit card number </span>
+                <br></br>
                 <input
                   id={styles.card_num}
                   name=""
                   placeholder="Enter card number"
+                 
                 />
                 <br />
                 Exp month

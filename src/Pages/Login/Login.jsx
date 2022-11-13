@@ -15,17 +15,19 @@ const Login = () => {
     let data = { email: emaillogIn, password: passwordlogIn };
     if (emaillogIn === "admin@admin.com" && passwordlogIn === "admin") {
       dispatch(adminLoginRequest(data));
+      navigate("/admin")
      
     } else {
       dispatch(loginRequest(data));
-      
+      if(store.isAuth){
+   
+        navigate("/cart")
+      }
     }
   }
 
  
-if(store.isAdmin){
-  navigate("/admin")
-}
+
   return (
     <div>
       <form onSubmit={handleLogin}>

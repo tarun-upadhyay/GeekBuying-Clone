@@ -22,3 +22,6 @@ export const addToCart = (params)=>(dispatch)=>{
 export const deleteFromCart = (params)=>(dispatch)=>{
   return dispatch({type: types.DEL_TO_CART, payload: params});
 }
+export const shoppingDone = (dispatch)=>{
+  return dispatch({type: types.SHOPPING_DONE})
+}

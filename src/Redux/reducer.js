@@ -75,6 +75,12 @@ export const reducer = (oldState = initialState, action) => {
           ...oldState,
           cart: aferdel,
         }
+        case types.SHOPPING_DONE:
+          saveData("cart", [])
+          return{
+            ...oldState,
+            cart: []
+          }
 
     default:
       return oldState;
