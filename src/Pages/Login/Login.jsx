@@ -26,7 +26,9 @@ const Login = () => {
     }
   }
 
- 
+ if(store.isAuth){
+  navigate("/cart")
+ }
 
   return (
     <div>
