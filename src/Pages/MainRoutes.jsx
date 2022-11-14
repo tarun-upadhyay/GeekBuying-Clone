@@ -12,6 +12,7 @@ import Manage from "../Admin/Manage";
 import Login from "./Login/Login";
 
 import {PrivatRoute, SecondPrivate} from "../Components/PrivatRoute";
+import Order from "./Order";
 const MainRoutes = () => {
   return (
     <Routes>
@@ -28,6 +29,7 @@ const MainRoutes = () => {
       <Route path="/admin/addproduct" element={<PrivatRoute><AddProduct/></PrivatRoute>}></Route>
      <Route path="/admin/manage" element={<PrivatRoute><Manage/></PrivatRoute>}></Route>
      <Route path="/payment" element={<SecondPrivate><Payment/></SecondPrivate>}> </Route>
+   <Route path="/order" element={<SecondPrivate><Order></Order></SecondPrivate>}></Route>
     <Route path="*" element={<h1> 404 Page Not Found</h1>}></Route>
     </Routes>
   );
