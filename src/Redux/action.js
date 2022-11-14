@@ -25,3 +25,9 @@ export const deleteFromCart = (params)=>(dispatch)=>{
 export const shoppingDone = (dispatch)=>{
   return dispatch({type: types.SHOPPING_DONE})
 }
+export const handleOrderDone = (dispatch)=>{
+return dispatch({type: types.HANDLE_ORDER})
+}
+export const AcceptingOrder = (params)=> (dispatch)=>{
+return dispatch({type: types.ACCEPT_ORDER, payload: params})
+}

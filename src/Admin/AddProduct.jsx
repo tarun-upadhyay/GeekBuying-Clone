@@ -24,10 +24,11 @@ const initState = {
   category: "",
   rating: "",
   id: '',
+  status: false,
 };
 const AddProduct = () => {
   const dispatch = useDispatch();
-  const storedata = useSelector((e)=>e.products)
+  const storedata = useSelector((e)=>e.AppReducer.products)
 
   const [formData, setFormData] = useState(initState);
   const { title, price, img, category, rating } = formData;

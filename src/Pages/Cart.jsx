@@ -2,7 +2,7 @@ import { Box, Button, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteFromCart } from "../Redux/action";
+import { deleteFromCart, handleOrderDone } from "../Redux/action";
 
 const Cart = () => {
   const data = useSelector((store) => store.AppReducer.cart);
@@ -16,6 +16,9 @@ const Cart = () => {
 //finalPrice  ;
     return finalPrice;
   });
+  const handleOrder = ()=>{
+    dispatch(handleOrderDone)
+  }
 
   return (
     <Box w="80%" m="auto" mt="20px" mb="50px">
@@ -71,7 +74,7 @@ const Cart = () => {
             Number.parseFloat(finalPrice).toFixed(2)
           }</span>
         </Text>
-        <Button colorScheme="blue">
+        <Button colorScheme="blue" onClick={handleOrder}>
           <Link to={"/payment"}>Proceed to checkout</Link>
         </Button>
       </HStack>
