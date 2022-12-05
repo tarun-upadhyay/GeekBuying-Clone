@@ -37,3 +37,26 @@
    - <h4><a href="https://github.com/tarun-upadhyay"><strong>Tarun Upadhyay</strong></a></h4>
 ---
 Geekbuying Clone is an e-commerce web application that allows you to buy tools & assc. online. It has a variety of categories, just visit the product listing page and you will see all the products, in just a few clicks you can buy any product from the website. This project is just for educational purposes.
+
+## Screens 
+- Admin Panel
+- Homepage / Landing Page
+- Product Listing Page 
+- Product Description Page
+- Cart Management Page
+- Checkout with Address Management Page
+- Login / Logout Page
+- Signup Page
+
+<br />
+
+## 🚀 Features
+- Login and Signup User Account
+- Admin Panel
+- Listing of product in website
+- Cart Add and Remove Items 
+- Cart Update Quantities 
+
+<br />
+
+## Glimpses of Geekbuying-Clone 🙈 :
