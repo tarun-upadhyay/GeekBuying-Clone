@@ -24,5 +24,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
-  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="heroku" />
 </p>
+
+<h3 align="center"><a href="https://the-great-tarunu88-gmail-com-site-a4747.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
