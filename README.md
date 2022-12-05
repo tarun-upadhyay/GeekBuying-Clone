@@ -27,3 +27,11 @@
 </p>
 
 <h3 align="center"><a href="https://the-great-tarunu88-gmail-com-site-a4747.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
+
+## Contributors
+- Group project
+   - <h4><a href="https://github.com/abhishekyadav001"><strong>Abhishek Yadav</strong></a></h4>
+   - <h4><a href="https://github.com/Anandgupta09070"><strong>Anand Gupta</strong></a></h4>
+   - <h4><a href="https://github.com/gouseimmu"><strong>Shaik Gouse Mohiddin</strong></a></h4>
+   - <h4><a href="https://github.com/sumeetmore1997"><strong>Sumeet More</strong></a></h4>
+   - <h4><a href="https://github.com/tarun-upadhyay"><strong>Tarun Upadhyay</strong></a></h4>
