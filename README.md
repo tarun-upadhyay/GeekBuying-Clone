@@ -35,3 +35,5 @@
    - <h4><a href="https://github.com/gouseimmu"><strong>Shaik Gouse Mohiddin</strong></a></h4>
    - <h4><a href="https://github.com/sumeetmore1997"><strong>Sumeet More</strong></a></h4>
    - <h4><a href="https://github.com/tarun-upadhyay"><strong>Tarun Upadhyay</strong></a></h4>
+---
+Geekbuying Clone is an e-commerce web application that allows you to buy tools & assc. online. It has a variety of categories, just visit the product listing page and you will see all the products, in just a few clicks you can buy any product from the website. This project is just for educational purposes.
