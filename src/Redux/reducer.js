@@ -4,6 +4,8 @@ const initialState = {
   products: getLocalData("products_data") || [],
   details: [],
   cart: getLocalData("cart") || [],
+  order: getLocalData("order") || [],
+  orderAuth: getLocalData("orderAuth") || false,
 };
 
 export const reducer = (oldState = initialState, action) => {
@@ -77,10 +79,24 @@ export const reducer = (oldState = initialState, action) => {
         }
         case types.SHOPPING_DONE:
           saveData("cart", [])
+          saveData("orderAuth", true)
           return{
             ...oldState,
+            orderAuth: true,
             cart: []
           }
+          case types.HANDLE_ORDER:
+            saveData("order", oldState.cart)
+            return{
+              ...oldState,
+              order: oldState.cart,
+            }
+            case types.ACCEPT_ORDER:
+              saveData("order", payload)
+              return{
+                ...oldState,
+                order: payload
+              }
 
     default:
       return oldState;

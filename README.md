@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+<h1 align="center">Geekbuying Clone</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">It's a React-Redux based E-commerce web application with all the major functionalities</h3>
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+<h2 align="center">🖥️ Tech Stack</h2>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h4 align="center">Frontend:</h4>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
+  <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
+  <img src="https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white" alt="chakra-ui" />
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
+  <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5" />
+</p>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h4 align="center">Deployed On:</h4>
 
-### `npm run build`
+<p align="center">
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3 align="center"><a href="https://the-great-tarunu88-gmail-com-site-a4747.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributors
+- Group project
+   - <h4><a href="https://github.com/abhishekyadav001"><strong>Abhishek Yadav</strong></a></h4>
+   - <h4><a href="https://github.com/Anandgupta09070"><strong>Anand Gupta</strong></a></h4>
+   - <h4><a href="https://github.com/gouseimmu"><strong>Shaik Gouse Mohiddin</strong></a></h4>
+   - <h4><a href="https://github.com/sumeetmore1997"><strong>Sumeet More</strong></a></h4>
+   - <h4><a href="https://github.com/tarun-upadhyay"><strong>Tarun Upadhyay</strong></a></h4>
+---
+Geekbuying Clone is an e-commerce web application that allows you to buy tools & assc. online. It has a variety of categories, just visit the product listing page and you will see all the products, in just a few clicks you can buy any product from the website. This project is just for educational purposes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screens 
+- Admin Panel
+- Homepage / Landing Page
+- Product Listing Page 
+- Product Description Page
+- Cart Management Page
+- Checkout with Address Management Page
+- Login / Logout Page
+- Signup Page
 
-### `npm run eject`
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Features
+- Login and Signup User Account
+- Admin Panel
+- Listing of product in website
+- Cart Add and Remove Items 
+- Cart Update Quantities 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Glimpses of Geekbuying-Clone 🙈 :

@@ -1,120 +1,80 @@
-import "./Nav.css";
-import { Link } from "react-router-dom";
-import { ImMobile2 } from "react-icons/im";
-import { CgShoppingCart } from "react-icons/cg";
-import { AiOutlineUser } from "react-icons/ai";
-import { IoMdMenu } from "react-icons/io";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { BsSearch } from "react-icons/bs";
-import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
-import Logo from "../logo.png";
-import { navData } from "./data";
-
-const indianFlagpng = "https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png";
-import { useDispatch, useSelector } from "react-redux";
-import { logOut } from "../Redux/Auth/action";
-const indianFlagpng= "https://cdn.iconscout.com/icon/free/png-64/india-flag-country-nation-union-empire-32988.png";
-export const Nav = () => {
-  return (
-    <>
-      <NavTop></NavTop>
-      <Navbar></Navbar>
-      <NavbarBottom></NavbarBottom>
-    </>
-  );
-};
+import { Flex, Image, Box,HStack, Text,Input, Spacer, VStack, Center } from '@chakra-ui/react'
+import React from 'react'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { logOut } from '../Redux/Auth/action';
+import logo from "./Golden Minimal Floral Frame Design Studio Logo (1).png";
 
 const Navbar = () => {
-  const [shipping, setShipping] = useState(false);
-  const handleShippingPop = (data) => {
-    setShipping(data);
-  };
-
-  const [signin, setSignin] = useState(false);
-  const handleSigninPop = (data) => {
-    setSignin(data);
-  };
-  const [cart, setCart] = useState(false);
-  const handleCartPop = (data) => {
-    setCart(data);
-  };
+    const store = useSelector((store)=> store.AuthReducer);
+    const productStore = useSelector((s)=> s.AppReducer)
+const dispatch = useDispatch();
+const handleLogout  = ()=>{
+    dispatch(logOut)
+}
   return (
-    <div id="navbarDivxyz">
-      <Link to={"/"}>
-        <div id="logoDivxyz">
-          <img src={Logo} alt="" />
-        </div>
-      </Link>
+    <Box w="100%">
+        <Box bg="#1e2c40">
+        <VStack >
+        <HStack bg="#1e2c40" justifyContent="space-evenly">
+               <Link to="/">
+               <Image src={logo} width="250px" height="100px" >
 
-      <div id="search_Divxyz">
-        <div id="search_Div_subxyz">
-          All Categories <IoMdArrowDropdown />
-        </div>
-        <input type="text" placeholder="Search by keywords" />
-        <div id="searchIconxyz">
-          <BsSearch />
-    const [shipping, setShipping] = useState(false);
-    const handleShippingPop = (data) => {
-        setShipping(data)
-    }
-    const dispatch = useDispatch()
-const isAuth = useSelector((el)=> el.AuthReducer.isAuth)
-    const [signin, setSignin] = useState(false);
-    const handleSigninPop = (data) => {
-        setSignin(data)
-    }
-    const [cart, setCart] = useState(false);
-    const handleCartPop = (data) => {
-        setCart(data)
-    }
-    const cartCounterval = useSelector((el)=> el.AppReducer.cart.length)
-   const handleLogout = ()=>{
-dispatch((logOut))
-   }
-    return (
-        <div id="navbarDiv">
-            <Link to={"/"}><div id="logoDiv"><img src={Logo} alt="" /></div></Link>
-            
-            <div id="search_Div">
-                <div id="search_Div_sub">All Categories <IoMdArrowDropdown/></div>
-                <input type="text" placeholder="Search by keywords" />
-                <div id="searchIcon"><BsSearch/></div>
-            </div>
-            
-            <div id="accountDiv">
-                <div id="shippingMainDiv" onMouseEnter={() => { handleShippingPop(true) }} onMouseLeave={() => { handleShippingPop(false) }}>
-                    <div>Ship to</div>
-                    <div id="shippingDiv">
-                        <div id="indianFlag"><img src={ indianFlagpng} h="20px" w="25px" mr="5px" alt="" /></div>
-                        <div id="currencyDiv">/INR<IoMdArrowDropdown /></div>
-                        {shipping?<ShippingPop></ShippingPop>:null}
-                    </div>
-                </div>
+</Image></Link>
+            <Input bg="white" width="80em" margin="0px" border="0px"/>
+            <Spacer/>
+           
+           {
+            store.isAdmin || store.isAuth ? <Text color={"white"} fontSize="4xl" onClick={handleLogout}>Log out</Text> :  <Link to="/login"><Text fontSize='4xl' color="white">Sign In</Text></Link>
+           } 
+            </HStack>
+            <Box  ><Center>
 
-           { !isAuth ?
-                 <div id="signInDiv" onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
-                 <AiOutlineUser/>
-                 <p>sign in</p>
-                 {signin ? <SignInPop></SignInPop> : null}
-             </div>
-             : <div id="signInDiv" onClick={handleLogout} onMouseEnter={()=>{handleSigninPop(true)}} onMouseLeave={()=>{handleSigninPop(false)}}>
-             <AiOutlineUser/>
-             <p>Log out</p>
-             {signin ? <SignInPop></SignInPop> : null}
-         </div>
-           }
+                <HStack p="1em" fontSize="3xl" gap="2em" bg="#1e2c40" color="white" w="100%">
+                    <Text >
+                        <Link to="/product">
+                        New</Link>
+                    </Text>
+                    <Text>
+                        <Link to="/product">
+                        Best Selling</Link>
+                    </Text>
+                    <Text> 
+                        <Link to="/product">
+                        Brand</Link>
+                    </Text>
+                    <Text> 
+                        <Link to="/product">
+                        Clearance
+                        </Link>
+                    </Text>
+                    <Text>Deals</Text>
+                    <Text> Coupon</Text>
+                    <Text> App only</Text>
+                    {
+                        store.isAdmin ? <Text>
+                            <Link to="/admin">ADMIN</Link>
+                        </Text> : productStore.orderAuth && <Text><Link to="/order">Orders</Link></Text>
+                    }
+                    <Link to={"/cart"}> 
+                    <AiOutlineShoppingCart color="white" fontSize="3rem"/>
+                    </Link>
+                   {
+                     store.isAdmin || store.isAuth ? "":  <Link to="/signup"> <Text> Sign Up</Text></Link>
+                   }
 
-                <Link to={"/cart"}>
-                <div id="cartDiv" onMouseEnter={()=>{handleCartPop(true)}} onMouseLeave={()=>{handleCartPop(false)}}><CgShoppingCart /><div id="cartCounter">{ cartCounterval}</div>
-                    {cart ? <CartPop></CartPop> : null}
-                </div></Link>
-            </div>
-            
-        </div>
-      </div>
+                </HStack>
+            </Center>
+            </Box>
+        </VStack>
+                
+        </Box>
+    </Box>
+  )
+}
 
+<<<<<<< HEAD
       <div id="accountDivxyz">
         <div
           id="shippingMainDivxyz"
@@ -501,3 +461,6 @@ const NavbarBottomDrop2 = ({ mount2 }) => {
   );
 };
 
+=======
+export default Navbar
+>>>>>>> 33e895cf6fc1f71fc1579cf26ba37531e226db03

@@ -37,6 +37,7 @@ const Detail = () => {
       price: price,
       rating: rating,
       count: count,
+      status: false,
     }
     dispatch(addToCart(newdata))
     alert("Added inside the cart")
